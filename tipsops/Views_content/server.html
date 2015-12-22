@@ -18,7 +18,7 @@ function click_button(){
 
     $.ajax({
        type: "POST",
-       url: "get.php",
+       url: "Controllers/Models_server/get.php",
        data: {'categories' :tmp},
        success: function(data) {
             alert(data);
