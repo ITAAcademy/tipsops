@@ -10,7 +10,7 @@ body {
 }
 
 footer {
-    margin: 10px 0;
+    margin: 0px 0px;
 }
 #menu_backround{
 		/* IE10+ */ 
@@ -30,4 +30,7 @@ background-image: -webkit-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 
 
 /* W3C Markup */ 
 background-image: linear-gradient(to bottom, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);
+}
+#footer{
+    background: #0099FF;
 }
