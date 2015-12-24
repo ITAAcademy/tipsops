@@ -11,15 +11,19 @@
     <div class="container">
         <div class="row">
             <!-- Blog Post Content Column -->
-            <?php include_once 'Views_content/main.php'?>
+            <div class="col-lg-8">
+                <?php include_once 'Views_content/about.php'?>
+            </div>
             <!-- Blog Sidebar Widgets Column -->
-            <?php include_once 'template/blocks.php'; ?>
+            <div class="col-md-4">
+                <?php include_once 'template/blocks.php'; ?>
+            </div>
         </div>
         <!-- /.row -->
-        <hr/>
-        <!-- Footer -->        
-        <?php include 'template/footer.php'; ?>
+        <hr/>        
     </div>
+    <!-- Footer --> 
+    <?php include_once 'template/footer.php'; ?>
     <!-- /.container -->
     <!-- jQuery -->
     <script src="template/js/jquery.js"></script>
