@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<body>
+
+<form action="" method="post" id="idForm" name="Form">
+
+        <select  id="my_select" name="nameForm[]" >
+                    <!--<select id=”idSelect” name="nameForm[]" > -->
+                    <option value="0">text</option>
+                    <option value="1">text_and_Code</option>
+                    <option value="2">header</option>
+                    <option value="3">tips</option>
+                    <option value="4">attention</option>
+                    <option value="5">comparison</option>
+                    <option value="6">ad_Unit</option>
+        </select>
+
+            <input type="text" id=”id_text” name="nameForm[]" />
+            <button type="button"  onclick="Add_element()">clone</button>
+     
+
+</form>
+
+<script>
+            function Add_element() {
+            $('form').append(
+                    '<select>' +
+                    '<option value="0">text</option>' +
+                    '<option value="1">text_and_Code</option>' +
+                    '<option value="2">header</option>' +
+                    '<option value="3">tips</option>' +
+                    '<option value="4">attention</option>' +
+                    '<option value="5">comparison</option>' +
+                    '<option value="6">ad_Unit</option>' +
+                    '<input  type="text"/></select>' +
+                    '<input  type="button" value="delete_element" onclick="Del_element()"/></select><br>');
+            }
+            function Del_element() {
+            }
+</script>
+
+</body>
+</html>
+<div class="examples">
+ <center><button name="sample1" class="sample1">save</button>  </center>  
+
+
+ <script language="javascript" type="text/javascript">
+$('.sample1').click( function(){
+$.ajax({
+    url: 'http://site1.loc/test2.php?action=sample1',
+    success: function(DataRespons) {
+                $('.results').html(DataRespons);
+          }
+
+</script>
+<script>
+</script>
+
+
+</body>
+</html>
+
