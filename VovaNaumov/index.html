@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<script src="jquery/external/jquery/jquery.js"></script>
+<script src="jquery/external/jquery/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+
+
+
+
+<form action="" method="post" name="Form">
+    <div id="DynamicExtraFieldsContainer">
+      <div id="addDynamicField">
+        <input type="button" id="addDynamicExtraFieldButton" value="Dobavit pole">
+      </div>
+       <div class="DynamicExtraField">
+           <input type="text" id="menu_text" size="20" maxlength="50">
+<select id="IDselect" >
+    <option value="text">text</option>
+    <option value="text_and_Code">text_and_Code</option>
+    <option value="header">header</option>
+    <option value="tips">tips</option>
+    <option value="attention">attention</option>
+    <option value="comparison">comparison</option>
+    <option value="ad_Unit">ad_Unit</option>
+    </select> 
+           
+          </div>
+                </div>
+				
+				<script>
+$('#addDynamicExtraFieldButton').click(function(event) {
+    addDynamicExtraField();
+    return false;
+ });
+function addDynamicExtraField() {
+    var div = $('<div/>', {
+        'class' : 'DynamicExtraField'
+    }).appendTo($('#DynamicExtraFieldsContainer'));
+    var br = $('<br/>').appendTo(div);
+    var label = $('<label/>').html("").appendTo(div);
+    var input = $('<input/>', {
+        value : 'dell',
+        type : 'button',
+        'class' : 'DeleteDynamicExtraField'
+    }).appendTo(div);
+    input.click(function() {
+        $(this).parent().remove();
+    });
+    var br = $('<br/>').appendTo(div);
+    var textarea = $('<textarea/>', {
+        name : 'DynamicExtraField[]',
+        cols : '30',
+        rows : '3'
+    }).appendTo(div);
+	
+    var textarea = $('<textarea/>', {
+        name : 'DynamicExtraField[]',
+        cols : '30',
+        rows : '3'
+    }).appendTo(div);
+}
+//Для удаления первого поля
+$('.DeleteDynamicExtraField').click(function(event) {
+                $(this).parent().remove();
+                return false;
+            });
+</script>
+				
+				</body>
+</form>
+</html>
