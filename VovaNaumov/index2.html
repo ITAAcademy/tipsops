@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+
+    <script src="jquery/external/jquery/jquery.js"></script>
+    <script src="jquery/external/jquery/jquery-ui.min.js"></script>
+
+
+
+</head>
+<body>
+<div id="jj"></div>
+<div id="jq"></div>
+
+
+
+<input type="text" id="menu_text" size="20" maxlength="50">
+<select id="IDselect" >
+    <option value="text">text</option>
+    <option value="text_and_Code">text_and_Code</option>
+    <option value="header">header</option>
+    <option value="tips">tips</option>
+    <option value="attention">attention</option>
+    <option value="comparison">comparison</option>
+    <option value="ad_Unit">ad_Unit</option>
+    </select>
+
+
+<input type="button" value="Добавить" onclick="addBlock();"></button>
+
+</body>
+
+<script>
+
+ 
+    function addBlock(){
+	 var jj=$('#IDselect').val();
+        $('#jj').append('<div>'+jj+'</div>')
+        var jq=$('#menu_text').val();
+		$('#jq').append('<div>'+jq+'</div>')
+        }
+
+</script>
+
+</html>
