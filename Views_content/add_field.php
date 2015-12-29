@@ -1,9 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Динамическое добавление поля в форму (для обработки на стороне клиента).</title>
-<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
 <script type="text/javascript">
 
 function addField() {
@@ -88,7 +82,7 @@ input {
 	cursor: pointer;
 	margin: 5px;
 	display:inline-block;
-	background: url(delete.png) repeat;
+	background: url(Views_content/images/delete.png) repeat;
 	background-position: center center;
 	background-repeat: no-repeat;
 	position:absolute;
@@ -107,8 +101,7 @@ input {
 <form action="" method="post" id="idForm" name="Form">
 
         <div id="add_field_area">
-			<?  
-      //      $array = 'ватрушка|эклер|сочник|пирожок с яблоком';
+			<?
             $array = '';
             $values = explode("|",$array);
             $n = 0;
@@ -161,4 +154,4 @@ input {
 </form>
 
 </body>
-</html>
+
