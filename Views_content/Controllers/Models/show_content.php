@@ -1,9 +1,9 @@
 <?php
-function show_content($title, $data, $articles)
+function show_content($title, $date, $articles)
 {
     echo'<h2>$title</h2>
      <hr/>
-     <p><span class="glyphicon glyphicon-time"></span>Дата $data</p>
+     <p><span class="glyphicon glyphicon-time"></span>Дата $date</p>
      <hr/>
     ';
     foreach($articles as $art_){
