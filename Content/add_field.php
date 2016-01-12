@@ -82,7 +82,7 @@ input {
 	cursor: pointer;
 	margin: 5px;
 	display:inline-block;
-	background: url(Views_content/images/delete.png) repeat;
+	background: url(Content/images/delete.png) repeat;
 	background-position: center center;
 	background-repeat: no-repeat;
 	position:absolute;
