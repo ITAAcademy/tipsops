@@ -5,7 +5,7 @@
 
         $sql = ("SELECT title FROM languages");
          $temp = $conn->query($sql);
-        $conn->close();
+
 
         $result_array = array();
 
@@ -15,8 +15,8 @@
            // echo $row['title'] . "</br>";
             $result_array[$i] =$row['title'];
         }
-
-
+         $temp->close(); // free memory
+         $conn->close(); // close connect
         return $result_array;
     }
 ?>
