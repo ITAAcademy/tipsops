@@ -1,13 +1,8 @@
-$.ajax({
-    url: 'Content/Controllers/main_title.php?action=sample1',
-    success: function(DataRespons) {
-        $('.results').html(DataRespons);
-    }
+$(document).ready(function(){
+    $('button#button').click(function(){
+        var title = this.name;
+        $('h2#language').text(title);
+    });
 });
-//var text = "Java";
-//$(document).ready(function () {
-//    $('h2#language').text(text);
-//});
-console.log("Included");
 
 
