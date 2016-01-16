@@ -4,7 +4,7 @@
         include ('connect/connect.php');
 
         $sql = ("SELECT title FROM languages");
-         $temp = $conn->query($sql);
+         $temp = $conn->query($sql);    //the variable $conn connect with file connect.php
 
 
         $result_array = array();
