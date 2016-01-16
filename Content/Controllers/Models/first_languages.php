@@ -12,6 +12,7 @@ function get__firstLanguages()
     // echo $row[0] . "</br>";
     $result = $row[0];
 
+
     $temp->close(); // free memory
     $conn->close(); // close connect
     return $result;
