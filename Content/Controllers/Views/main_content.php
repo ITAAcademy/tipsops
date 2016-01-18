@@ -10,7 +10,8 @@ function show__content($title, $date, $author, $revisions, $articles)
          </p>
          <hr/>
         ";
-        echo "<p>&nbsp;&nbsp;&nbsp;$articles</p>";
+        echo "<div class='article'><p>&nbsp;&nbsp;&nbsp;$articles</p></div>";
 //    }
+
 }
 ?>
