@@ -1,26 +1,15 @@
 <?php
 include"Models/select_articles.php";
-$head_title = get__first_article();
+$head_title = $_GET['id'];
 call__articles($head_title);
-function call__first_articles()
-{
-    include"Models/select_articles.php";
-
-    $head_title = get__first_article();
-    call_articles($head_title);
-
-    $array_article = get__articles($head_title);
-    articles($array_article, $head_title);
-}
-
 function call__articles($head_title)
 {
     $array_article = get__articles($head_title);
     articles($array_article, $head_title);
 }
+
 function articles($array_article, $article)
 {
-
     include"Views/main_content.php";
     $numbers=get__numbers($article);
     for( $i=0; $i<$numbers; $i++)
@@ -33,6 +22,5 @@ function articles($array_article, $article)
 
         show__content($title, $updated, $author, $revisions, $article);
     }
-
 }
 
