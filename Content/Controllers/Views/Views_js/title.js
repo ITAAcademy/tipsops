@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // this function change title at click button
     $('button#button').click(function(){
         var title = this.name;
         $('h2#language').text(title);
@@ -10,7 +11,8 @@ $(document).ready(function(){
         //        $('div.main_content').html(DataResponse);
         //    }
         //})
-        $.get('Content/Controllers/controller_get_articles.php?', {id: title}, function(data){
+        // AJAX call controller for show content and send id at click on button
+        $.get('Content/Controllers/controller_get_language.php?', {id: title}, function(data){
                 $('div.main_content').html(data);
                 });
 
