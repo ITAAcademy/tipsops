@@ -5,7 +5,7 @@ function show_list($list){
         for($i=0; $i<$count;  $i++)
         {
             echo"<button type='button' class='btn btn-success' id='button' name='$list[$i]' >$list[$i]</button>";
-        }
+}
         echo"</div>";
 }
 ?>

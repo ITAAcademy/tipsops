@@ -1,14 +1,5 @@
 <?php
-include"Models/select_articles.php";
-$head_title = $_GET['id'];
-call__articles($head_title);
-function call__articles($head_title)
-{
-    $array_article = get__articles($head_title);
-    articles($array_article, $head_title);
-}
-
-function articles($array_article, $article)
+function ShowArticles($array_article, $article)
 {
     include"Views/main_content.php";
     $numbers=get__numbers($article);
