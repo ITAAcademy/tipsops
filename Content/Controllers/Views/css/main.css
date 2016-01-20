@@ -10,3 +10,9 @@
 .title{
     color: #cc3300;
 }
+.data_article{
+    border-radius: 4px;
+    border: 1px solid lightgreen;
+    padding: 5px;
+
+}
