@@ -3,7 +3,6 @@ include 'connect/security_from_injections.php'; //include function protections s
 
 function get__articles($title_id)
 {
-
     include 'connect/connect.php';
     $sql = "SELECT id, title_id, title, author,  article, updated_up, revisions FROM articles  WHERE title_id =".sip($title_id);
     $temp = $conn->query($sql); //the variable $conn connect with file connect.php
@@ -64,5 +63,26 @@ function get__first_article()
     $temp->close(); // free memory
     $conn->close(); // close connect
     return $result[0];
+}
+function GetListArticles($title_id)
+{
+    include 'connect/connect.php';
+    $sql = "SELECT title_id, title, preview_article FROM articles WHERE title_id =".sip($title_id);
+    $temp = $conn->query($sql); //the variable $conn connect with file connect.php
+    $number = $temp->num_rows;
+   // die("test2");
+    $result = array();
+    if($number>0) {
+        for ($i = 0; $i < $number; $i++)
+        {
+            $result[$i] = $temp->fetch_array();
+        }
+    }
+    else{die("SQL: Select is not successful: GetListArticles");}
+
+    $temp->close(); // free memory
+    $conn->close(); // close connect
+
+    return $result;
 }
 ?>
