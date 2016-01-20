@@ -14,4 +14,13 @@ function show__content($title, $date, $author, $revisions, $articles)
 //    }
 
 }
+
+function ShowPreviewArticle($title, $preview_article)
+{
+    echo"<h3 class='title'>$title</h3>
+         <div class='preview_article'>$preview_article</div>
+         <button type='button' class='btn btn-link'>Детальніше</button>
+         <hr>
+    ";
+}
 ?>

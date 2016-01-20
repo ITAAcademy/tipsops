@@ -12,7 +12,7 @@ $(document).ready(function(){
         //    }
         //})
         // AJAX call controller for show content and send id at click on button
-        $.get('Content/Controllers/controller_get_language.php?', {id: title}, function(data){
+        $.get('Content/Controllers/cont_lang_select_previews.php?', {id: title}, function(data){
                 $('div.main_content').html(data);
                 });
 
