@@ -67,7 +67,7 @@ function get__first_article()
 function GetListArticles($title_id)
 {
     include 'connect/connect.php';
-    $sql = "SELECT title_id, title, preview_article FROM articles WHERE title_id =".sip($title_id);
+    $sql = "SELECT id, title_id, title, preview_article FROM articles WHERE title_id =".sip($title_id);
     $temp = $conn->query($sql); //the variable $conn connect with file connect.php
     $number = $temp->num_rows;
    // die("test2");
@@ -85,4 +85,22 @@ function GetListArticles($title_id)
 
     return $result;
 }
+function GetArticle($title_id) {
+    include 'connect/connect.php';
+    $sql = "SELECT id, title, author,  article, updated_up, revisions FROM articles  WHERE id =" .sip($title_id);
+    $temp = $conn->query($sql); //the variable $conn connect with file connect.php
+    $number = $temp->num_rows;
+    $result = array();
+    if($number > 0) {
+        for ($i = 0; $i < $number; $i++) {
+            $result[$i] = $temp->fetch_array();
+        }
+    } else {
+        die("SQL: Select is not successful: GetArticle");
+    }
+    $temp->close(); // free memory
+    $conn->close(); // close connect
+    return $result;
+}
+
 ?>
