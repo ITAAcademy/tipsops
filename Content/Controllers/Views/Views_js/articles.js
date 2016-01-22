@@ -7,7 +7,6 @@ $(document).ready(function(){
     });
     $('button#all_arlicles').click(function(){
         var languege =$('h2#language').text();
-console.log(languege);
            // console.log(languege);
         $.get('Content/Controllers/cont_lang_select_previews.php?', {id: languege}, function(data){
             $('div.main_content').html(data);
