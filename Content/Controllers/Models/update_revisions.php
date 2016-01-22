@@ -2,8 +2,8 @@
 function UpdateRevisions($id, $value)
 {
     include ('connect/connect.php');
-   // $protected_value = sip($value); die($protected_value);
-    $sql = "UPDATE articles SET revisions='$value' WHERE id=".sip($id);
+    $value_pro = sip($value);
+    $sql = "UPDATE articles SET revisions = ".$value_pro." WHERE id=".sip($id);
     if($conn->query($sql))    //the variable $conn connect with file connect.php
     {}
     else{die("Error updating record:  UpdateRevisions");}
