@@ -1,5 +1,5 @@
 <?php
-function sip($in)  // this function protected from sql injection
+function sip($in)  // this function
 {
     return "unhex('".bin2hex($in)."')";
 }
