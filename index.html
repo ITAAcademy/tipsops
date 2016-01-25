@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="Content/scripts/getHtmlFromFile.js"></script>
+    <script>getHtml('template/head.html');</script>
+    <title>Tipsops</title>	
+</head>
+<body>
+    <!-- Navigation -->
+    <script>getHtml('template/navigation.html');</script>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+                <script>getHtml('Content/main.html');</script>
+            </div>
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <script>getHtml('Content/registration.html');</script>
+                <script>getHtml('Content/blocks.html');</script>
+            </div>
+        </div>
+        <!-- /.row -->
+        <hr/>        
+    </div>
+    <!-- Footer -->
+    <script>getHtml('template/footer.html');</script>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="template/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="template/js/bootstrap.min.js"></script>
+</body>
+</html>
