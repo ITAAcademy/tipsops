@@ -28,17 +28,9 @@
       ";
         return true;    //autorization is successful
     }
-    
-    //upcast autorization
-   
-    //point enter
-    $enter_site=true; 
-    
-    if($_POST['regist_user'])
-        {
-            include('registration.php');
-        }
-        else{
+
+
+
 
 
     $enter_site =false;
@@ -56,8 +48,9 @@
             //show users and additional information
 
                 echo '
-                <h5 align="center"><b>Увійти на сайт</b></h5>
-                <form class="form-horizontal" role="form">
+
+                <form class="form-horizontal" role="form" id="log_form" name="log_form">
+                `<h5 align="center"><b>Увійти на сайт</b></h5>
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="log_login">Логін:</label>
                     <div class="col-sm-10">
@@ -80,7 +73,7 @@
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                       <button type="button" class="btn btn-success">Увійти</button>
-                      <button type="button" class="btn btn-info">Зареєструватися</button>
+                      <button type="button" class="btn btn-info" id="log_reg_button">Зареєструватися</button>
                     </div>
                   </div>
                 </form>
@@ -88,6 +81,6 @@
                  
 
 
-        }
+
 
 ?>
