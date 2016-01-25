@@ -42,10 +42,10 @@ function SendOnMail($form_user, $form_email, $form_password) // html view send r
     }
 
 
-    $form_user=$_POST["username_reg"];
-    $form_email=$_POST["email"];
-    $form_password=$_POST["password"];
-    $form_password2=$_POST["password2"];
+    $form_user=$_POST["reg_login"];
+    $form_email=$_POST["reg_email"];
+    $form_password=$_POST["reg_pwd"];
+    $form_password2=$_POST["reg_pwd2"];
 
 
     
