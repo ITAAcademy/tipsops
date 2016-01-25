@@ -13,23 +13,25 @@ footer {
     margin: 0px 0px;
 }
 #menu_backround{
-		/* IE10+ */ 
-background-image: -ms-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);
+		/*/!* IE10+ *!/*/
+/*background-image: -ms-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);*/
 
-/* Mozilla Firefox */ 
-background-image: -moz-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);
+/*/!* Mozilla Firefox *!/*/
+/*background-image: -moz-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);*/
 
-/* Opera */ 
-background-image: -o-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);
+/*/!* Opera *!/*/
+/*background-image: -o-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);*/
 
-/* Webkit (Safari/Chrome 10) */ 
-background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00CCFF), color-stop(25, #000033), color-stop(75, #000033), color-stop(100, #00CCFF));
+/*/!* Webkit (Safari/Chrome 10) *!/*/
+/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00CCFF), color-stop(25, #000033), color-stop(75, #000033), color-stop(100, #00CCFF));*/
 
-/* Webkit (Chrome 11+) */ 
-background-image: -webkit-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);
+/*/!* Webkit (Chrome 11+) *!/*/
+/*background-image: -webkit-linear-gradient(top, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);*/
 
-/* W3C Markup */ 
-background-image: linear-gradient(to bottom, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);
+/*/!* W3C Markup *!/*/
+/*background-image: linear-gradient(to bottom, #00CCFF 0%, #000033 25%, #000033 75%, #00CCFF 100%);*/
+    /*background-color: #000033;*/
+    background-color: #1f1f4d;
 }
 #footer{
     background: #0099FF;

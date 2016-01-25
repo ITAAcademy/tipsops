@@ -7,10 +7,17 @@ $(document).ready(function(){
     });
     $('button#all_arlicles').click(function(){
         var languege =$('h2#language').text();
+<<<<<<< HEAD
 console.log(languege);
+=======
+>>>>>>> master
            // console.log(languege);
         $.get('Content/Controllers/cont_lang_select_previews.php?', {id: languege}, function(data){
             $('div.main_content').html(data);
         });
     })
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> master
