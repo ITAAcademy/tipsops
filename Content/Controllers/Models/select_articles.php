@@ -102,5 +102,23 @@ function GetArticle($title_id) {
     $conn->close(); // close connect
     return $result;
 }
+function SearchResult($search_select)
+{
+    include 'connect/connect.php';
+    $temp = $conn->query($search_select); //the variable $conn connect with file connect.php
+$number = $temp->num_rows;
+    $result = array();
+
+    if($number > 0) {
+        for ($i = 0; $i < $number; $i++) {
+            $result[$i] = $temp->fetch_assoc();
+        }
+    } else {
+        die("SQL: Select is not successful: SearchResult()");
+    }
+    $temp->close(); // free memory
+    $conn->close(); // close connect
+    return $result;
+}
 
 ?>
