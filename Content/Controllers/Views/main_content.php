@@ -11,7 +11,9 @@ function show__content($title, $date, $author, $revisions, $articles)
         <span class='glyphicon glyphicon-eye-open'></span><font-text>&nbsp; Переглядів: $revisions &nbsp;</font-text>
      </div>
    <div class='article'>$articles</div>
-   <button  type='button' id='all_arlicles' name='$title' class='btn btn-default btm-sm'>Показати всі статті</button>";
+   <button  type='button' id='all_arlicles' name='$title' class='btn btn-default btm-sm'>Показати всі статті</button>
+   <hr/>
+   ";
 //    }
 
 }

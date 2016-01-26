@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <script src="Content/scripts/getHtmlFromFile.js"></script>
-    <script src="Content/scripts/HideAndDisplayNew.js"></script>
     <script>getHtml('template/head.html');</script>
     <title>Tipsops</title>	
 </head>
@@ -10,16 +9,17 @@
     <!-- Navigation -->
     <script>getHtml('template/navigation.html');</script>
     <!-- Page Content -->
-    <div class="container">
-        <div class="row">
+    <div class="container" >
+        <div class="row" class="main">
             <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
+            <div class="col-lg-8" >
                 <script>getHtml('Content/main.html');</script>
             </div>
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
-                <script>getHtml('Content/login.html');</script>
-                <script>getHtml('Content/blocks.html');</script>
+                <script>getHtml('Content/search.html');</script>
+                <script>getHtml('Content/block_menu.html');</script>
+                <script>getHtml('Content/widget.html');</script>
             </div>
         </div>
         <!-- /.row -->

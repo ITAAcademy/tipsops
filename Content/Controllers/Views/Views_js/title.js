@@ -12,6 +12,8 @@ $(document).ready(function(){
         //    }
         //})
         // AJAX call controller for show content and send id at click on button
+        var empty = "";
+        $('input#search').val(empty);
         $.get('Content/Controllers/cont_lang_select_previews.php?', {id: title}, function(data){
                 $('div.main_content').html(data);
                 });
