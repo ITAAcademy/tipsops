@@ -42,23 +42,23 @@ function SendOnMail($form_user, $form_email, $form_password) // html view send r
     }
 
 
-    $form_user=$_POST["reg_login"];
-    $form_email=$_POST["reg_email"];
-    $form_password=$_POST["reg_pwd"];
-    $form_password2=$_POST["reg_pwd2"];
-
-
-    
-    if(empty($form_user)==false && empty($form_email)==false && empty($form_password)==false && empty($form_password2)==false )
-        {
-           if($form_password == $form_password2)
-            {
-               $_SESSION["username"]=$form_user; //if registration is saccessful , $_session == username
-               include('add_new_user.php');
-
-               SendOnMail($form_user, $form_email, $form_password);
-            }
-        }
-    
+//    $form_user=$_POST["reg_login"];
+//    $form_email=$_POST["reg_email"];
+//    $form_password=$_POST["reg_pwd"];
+//    $form_password2=$_POST["reg_pwd2"];
+//
+//
+//
+//    if(empty($form_user)==false && empty($form_email)==false && empty($form_password)==false && empty($form_password2)==false )
+//        {
+//           if($form_password == $form_password2)
+//            {
+//               $_SESSION["username"]=$form_user; //if registration is saccessful , $_session == username
+//               include('add_new_user.php');
+//
+//               //SendOnMail($form_user, $form_email, $form_password);
+//            }
+//        }
+//
     
 ?>

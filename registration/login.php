@@ -50,7 +50,7 @@
                 echo '
 
                 <form class="form-horizontal" role="form" id="log_form" name="log_form">
-                `<h5 align="center"><b>Увійти на сайт</b></h5>
+                <h5 align="center"><b>Увійти на сайт</b></h5>
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="log_login">Логін:</label>
                     <div class="col-sm-10">
