@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Content/Controllers/Views/Views_js/search.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Content/Controllers/con_route_search.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Content/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Content/search.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/template/navigation.html" charset="UTF-8" />
   </component>
 </project>
