@@ -26,3 +26,4 @@ function PrepareUpdate($array_result)
         UpdateRevisions($array_result[$i]['id'], $value); //update revisions articles
     }
 }
+
