@@ -5,6 +5,16 @@ require_once("models/articles.php");
 
 $link = $conn;
 
-$articles = articles_all($link);
+if(isset($_GET['action']))
+    $action = $_GET['action'];
+else
+    $action = "";
 
-include ("views/articles_admin.php");
+if($action == "delete"){
+    $id = $_GET['id'];
+    $article = article_delete($link, $id);
+    header("Location: index.php");
+}else{
+    $articles = articles_all($link);
+    include ("views/articles_admin.php");
+}

@@ -24,7 +24,7 @@
                         <th><?=$a['title_id']?></th>
                         <th><?=$a['title']?></th>
                         <th>
-                            <a href="index.php?action=edit&id=<?=$a['id']?>">Змінити</a>
+                            <a href="index.php?action=edit&id=<?=$a['id']?>">Редагувати</a>
                         </th>
                         <th>
                             <a href="index.php?action=delete&id=<?=$a['id']?>">Видалити</a>
