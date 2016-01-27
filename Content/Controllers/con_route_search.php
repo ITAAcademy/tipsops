@@ -11,10 +11,8 @@ else{ die("Nothing is found");}
 if($words === "") return false;
 $select_search = SearchSelect($words);         // get select with db
 $array_result = SearchResult($select_search); //controller get select with db
-//$numbers = array();
-//$numbers = array("1", "2", "3");
-//$temp = count($numbers); echo($temp);
-ShowResult($array_result); //
-//die ($select_result[1]['article']);
+PrepareUpdate($array_result); // update reviews article
+ShowResult($array_result);
+
 
 ?>
