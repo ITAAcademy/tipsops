@@ -1,8 +1,8 @@
 <?php
-function ShowArticles($array_article, $article)
+function ShowArticles($array_article, $head_title)
 {
     include"Views/main_content.php";
-    $numbers=get__numbers($article);
+    $numbers=get__numbers($head_title);//get numbers articles with sql db
     for( $i=0; $i<$numbers; $i++)
     {
         $title = $array_article[$i]['title'];
@@ -37,5 +37,20 @@ function ShowSelectArticles($array_article)
         $revisions = $array_article[0]['revisions'];
 
         show__content($title, $updated, $author, $revisions, $article);
+}
+function ShowResult($array_article)
+{
+    include"Views/main_content.php";
+    $numbers=count($array_article);//get numbers article
+    for( $i=0; $i<$numbers; $i++)
+    {
+        $title = $array_article[$i]['title'];
+        $updated = $array_article[$i]['updated_up'];
+        $article = $array_article[$i]['article'];
+        $author = $array_article[$i]['author'];
+        $revisions = $array_article[$i]['revisions'];
+
+        ShowContentSearch($title, $updated, $author, $revisions, $article);
+    }
 }
 
