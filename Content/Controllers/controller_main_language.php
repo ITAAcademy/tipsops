@@ -54,3 +54,4 @@ function ShowResult($array_article)
     }
 }
 
+
