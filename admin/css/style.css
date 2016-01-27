@@ -2,3 +2,7 @@
     width: 100%;
     background-color: #fff6bf;
 }
+
+tr, th {
+    border: 1px solid black; /* Параметры рамки */
+}
