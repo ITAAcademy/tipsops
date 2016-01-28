@@ -114,7 +114,7 @@ $number = $temp->num_rows;
             $result[$i] = $temp->fetch_assoc();
         }
     } else {
-        die("SQL: Select is not successful: SearchResult()");
+        return false;
     }
     $temp->close(); // free memory
     $conn->close(); // close connect
