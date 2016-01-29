@@ -2,6 +2,30 @@
 <html lang="en">
 <head>
     <script src="Content/scripts/getHtmlFromFile.js"></script>
+    <script src="Content/scripts/HideAndDisplayNew.js"></script>
+
+
+    <script type="text/javascript" language="javascript">
+            function call() {
+            var msg   = $('#reg_form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'registration/registration_logic.php',
+                data: msg,
+                success: function(data) {
+                    alert(data);
+                },
+                error:  function(){
+                    alert('Registration error: ' + xhr.responseCode);
+                }
+            });
+
+        }
+
+    </script>
+
+
+
     <script>getHtml('template/head.html');</script>
     <title>Tipsops</title>	
 </head>
@@ -18,6 +42,8 @@
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
                 <script>getHtml('Content/search.html');</script>
+                <script>getHtml('Content/login.html');</script>
+                <script>getHtml('Content/registration.html');</script>
                 <script>getHtml('Content/block_menu.html');</script>
                 <script>getHtml('Content/widget.html');</script>
             </div>

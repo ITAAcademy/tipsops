@@ -1,19 +1,20 @@
 <?php
-include('registration_logic.php');   //logic registration and insert data
 
+//include('registration_logic.php');   //logic registration and insert data
 
-if($_SESSION['username'] != '')
-{
-       echo
-        "
-          <meta http-equiv='Refresh' content='0; URL=/'>
-        ";
-
-}
-else{
+//if($_SESSION['username'] != '')
+//{
+//       echo
+//        "
+//          <meta http-equiv='Refresh' content='0; URL=/'>
+//        ";
+//
+//}
+//else{
     echo '
-                   <h5 align="center"><b>Зареєструватися</b></h5>
-                  <form class="form-horizontal" role="form">
+
+                  <form class="form-horizontal" role="form" id="reg_form" style="display:none;" method="POST"  action="javascript:void(null);" onsubmit="call()" >
+                  <h5 align="center"><b>Зареєструватися</b></h5>
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="reg_login">Логін:</label>
                     <div class="col-sm-10">
@@ -40,15 +41,16 @@ else{
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                     <button type="button" class="btn btn-success">Зареєструватися</button>
+                     <input type="submit" id="log_reg_button" class="btn btn-success" value="Зареєструватися" />
+                     <button type="button" class="btn btn-link" id="reg_to_log">Вводимо логін</button>
                     </div>
                   </div>
                 </form>
     ';
 
-} 
-       
-    
+//}
+
+
 
    
 
