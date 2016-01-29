@@ -9,7 +9,11 @@ if(isset($_GET['key']))
     $words = $_GET['key'];
 }
 else{ die("Nothing is found");}
-if($words === "") return false;
+if($words === "")
+{
+    ShowEmpty();
+    return;
+}
 $select_search = SearchSelect($words);         // get select with db
 $array_result = SearchResult($select_search); //controller get select with db
 if($array_result != false)
@@ -21,7 +25,7 @@ if($array_result != false)
 }
 else{
     ShowNumbers(0);
-    ShowEmpty($words);
+    ShowNoSearch($words);
 }
 
 
