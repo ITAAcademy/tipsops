@@ -10,6 +10,5 @@ mysqli_set_charset($conn, "utf8");
 if($conn->connect_error){
     die("Connection foiled: " . $conn->connect_error);
 }
-//echo "Conected successfully"."</br>";
 
 ?>
