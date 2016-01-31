@@ -1,6 +1,7 @@
 <?php
 include 'Controllers/Models/connect/connect.php';
 
+
 $catalog = $_POST['sel1'];
 $titels = $_POST['inp1'];
 $authors = $_POST['inp2'];
