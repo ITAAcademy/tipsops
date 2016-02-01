@@ -1,9 +1,9 @@
          .box1 {
              width:55%;
              height:210px;
-             background: #00FF66; /* Цвет фона */
+             background: #808080; /* Цвет фона */
              padding: 10px; /* Поля */
-             border: 1px solid #000; /* Параметры рамки */
+             border: 1px; /* Параметры рамки */
              float:left;
              word-wrap: break-word;
          }
@@ -13,7 +13,7 @@
              height:320px;
              background:#996666; /* Цвет фона */
              padding: 10px; /* Поля */
-             border: 1px solid #000; /* Параметры рамки */
+             border: 1px; /* Параметры рамки */
              float:right;
              word-wrap: break-word;
          }
@@ -23,7 +23,7 @@
              height:300px;
              background: 	#808080; /* Цвет фона */
              padding: 10px; /* Поля */
-             border: 1px solid #000; /* Параметры рамки */
+             border: 1px; /* Параметры рамки */
              float:left;
              word-wrap: break-word;
          }
