@@ -27,14 +27,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `articles` (
-  `id` int(6) unsigned NOT NULL,
-  `title_id` int(6) NOT NULL,
+  `id` int(6) AUTO_INCREMENT PRIMARY KEY,
+  `title_id` int(6)  unsigned NOT NULL,
   `title` text COLLATE utf8_unicode_ci NOT NULL,
   `author` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `preview_article` text COLLATE utf8_unicode_ci NOT NULL,
   `article` text COLLATE utf8_unicode_ci NOT NULL,
   `created_up` date DEFAULT NULL,
-  `updated_up` date DEFAULT NULL,
+  `updated_up` TIMESTAMP,
   `revisions` int(10) unsigned DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
