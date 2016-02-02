@@ -5,13 +5,13 @@
 
 CKEDITOR.editorConfig = function( config ) {
 
-    config.filebrowserBrowseUrl =       '/tipsops/editor/kcfinder/browse.php?opener=ckeditor&type=files';
-    config.filebrowserImageBrowseUrl =  '/tipsops/editor/kcfinder/browse.php?opener=ckeditor&type=images';
-    config.filebrowserFlashBrowseUrl =  '/tipsops/editor/kcfinder/browse.php?opener=ckeditor&type=flash';
-    config.filebrowserUploadUrl =       '/tipsops/editor/kcfinder/upload.php?opener=ckeditor&type=files';
-    config.filebrowserImageUploadUrl =  '/tipsops/editor/kcfinder/upload.php?opener=ckeditor&type=images';
-    config.filebrowserFlashUploadUrl =  '/tipsops/editor/kcfinder/upload.php?opener=ckeditor&type=flash';
 
+    config.filebrowserBrowseUrl =       'editor/kcfinder/browse.php?opener=ckeditor&type=files';
+    config.filebrowserImageBrowseUrl =  'editor/kcfinder/browse.php?opener=ckeditor&type=images';
+    config.filebrowserFlashBrowseUrl =  'editor/kcfinder/browse.php?opener=ckeditor&type=flash';
+    config.filebrowserUploadUrl =       'editor/kcfinder/upload.php?opener=ckeditor&type=files';
+    config.filebrowserImageUploadUrl =  'editor/kcfinder/upload.php?opener=ckeditor&type=images';
+    config.filebrowserFlashUploadUrl =  'editor/kcfinder/upload.php?opener=ckeditor&type=flash';
 
 
 
