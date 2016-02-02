@@ -4,7 +4,7 @@ include 'connect/security_from_injections.php'; //include function protections s
 function get__articles($title_id)
 {
     include 'connect/connect.php';
-    $sql = "SELECT id, title_id, title, author,  article, updated_up, revisions FROM articles  WHERE title_id =".sip($title_id);
+    $sql = "SELECT id, title_id, title, author,  article, updated_up, revisions FROM articles  WHERE title_id =(SELECT id FROM languages WHERE title=".sip($title_id).")";
     $temp = $conn->query($sql); //the variable $conn connect with file connect.php
     $number = $temp->num_rows;
     $result = array();
@@ -23,7 +23,7 @@ function get__articles($title_id)
 function get__numbers($article)
 {
     include 'connect/connect.php';
-    $sql = "SELECT COUNT('id') FROM articles WHERE title_id =".sip($article);
+    $sql = "SELECT COUNT('id') FROM articles WHERE title_id =(SELECT id FROM languages WHERE title=".sip($article).")";
     $temp = $conn->query($sql); //the variable $conn connect with file connect.php
     if($temp->num_rows>0)
     {
@@ -67,7 +67,7 @@ function get__first_article()
 function GetListArticles($title_id)
 {
     include 'connect/connect.php';
-    $sql = "SELECT id, title_id, title, preview_article FROM articles WHERE title_id =".sip($title_id);
+    $sql = "SELECT id, title_id, title, preview_article FROM articles WHERE title_id =(SELECT id FROM languages WHERE title=".sip($title_id).")";
     $temp = $conn->query($sql); //the variable $conn connect with file connect.php
     $number = $temp->num_rows;
    // die("test2");
