@@ -1,29 +1,29 @@
          .box1 {
-             width:55%;
-             height:210px;
-             background: #808080; /* Цвет фона */
-             padding: 10px; /* Поля */
-             border: 1px; /* Параметры рамки */
+             width:100%;
+             height:190px;
+             background: #808080; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
+             padding: 10px; /* пїЅпїЅпїЅпїЅ */
+             border: 1px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
              float:left;
              word-wrap: break-word;
          }
 
          .box2 {
-             width:85%;
-             height:320px;
-             background:#996666; /* Цвет фона */
-             padding: 10px; /* Поля */
-             border: 1px; /* Параметры рамки */
-             float:right;
+             width:100%;
+             height:700px;
+             background:#996666; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
+             padding: 10px; /* пїЅпїЅпїЅпїЅ */
+             border: 1px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+             float:left;
              word-wrap: break-word;
          }
 		 
 		 .box3 {
-             width:40%;
-             height:300px;
-             background: 	#808080; /* Цвет фона */
-             padding: 10px; /* Поля */
-             border: 1px; /* Параметры рамки */
+             width:55%;
+             height:210px;
+             background: 	#996666; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
+             padding: 10px; /* пїЅпїЅпїЅпїЅ */
+             border: 1px; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
              float:left;
              word-wrap: break-word;
          }
