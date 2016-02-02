@@ -3,6 +3,7 @@ include'con_main_search.php';
 include 'controller_main_language.php';
 include'Models/select_articles.php';
 include 'Views/search.php';
+include 'Views/pagination.php';
 
 if(isset($_GET['key']))
 {
@@ -22,11 +23,15 @@ if($array_result != false)
     $result = count($array_result);
     ShowNumbers($result);
     ShowResult($array_result);
+    ShowPagination();
+
 }
 else{
     ShowNumbers(0);
     ShowNoSearch($words);
 }
-
+echo"
+    <script type='text/javascript' src='Content/Controllers/Views/Views_js/tuto-pagination.js'></script>
+    ";
 
 ?>
