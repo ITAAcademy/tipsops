@@ -111,7 +111,8 @@ function SearchSelect($words)
     foreach ($array_words as $key => $value) {
         if(isset($array_words[$key -1]))
             $query_search .= " OR ";
-        $query_search .= "title LIKE '%$value%' OR article LIKE '%$value%'";
+        $query_search .= "title LIKE '%$value%' COLLATE utf8_unicode_ci OR
+        article LIKE '%$value%' COLLATE utf8_unicode_ci";
     }
     $query = "SELECT id, title_id, title, author,  article, updated_up, revisions FROM articles WHERE " . $query_search;
     //die($query);
