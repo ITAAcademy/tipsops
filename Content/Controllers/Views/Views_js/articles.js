@@ -1,3 +1,8 @@
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 $(document).ready(function(){
     $('button#detailed_articles').click(function(){
         var title = this.name;

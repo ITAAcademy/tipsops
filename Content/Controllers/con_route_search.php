@@ -1,4 +1,9 @@
 <?php
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 include'con_main_search.php';
 include 'controller_main_language.php';
 include'Models/select_articles.php';
@@ -31,7 +36,7 @@ else{
     ShowNoSearch($words);
 }
 echo"
-    <script type='text/javascript' src='Content/Controllers/Views/Views_js/tuto-pagination.js'></script>
+    <script type='text/javascript' src='Content/Controllers/Views/Views_js/pagination.js'></script>
     ";
 
 ?>

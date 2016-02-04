@@ -1,4 +1,9 @@
 <?php
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 function ShowArticles($array_article, $head_title)
 {
     include"Views/main_content.php";

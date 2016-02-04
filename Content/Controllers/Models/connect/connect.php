@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 $server_name = "localhost";
 $user_name = "root";
 $password ="";
