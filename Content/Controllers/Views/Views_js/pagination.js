@@ -1,4 +1,8 @@
-
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: February 2016
+ */
 //$("#pagination a").trigger('click'); // When page is loaded we trigger a click
 
 var page =50;
