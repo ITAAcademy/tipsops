@@ -1,4 +1,7 @@
 <?php
+// //////////////////////
+// Brezdenyuk Olexandr//
+// ////////////////////
 include 'connect/security_from_injections.php'; //include function protections sip($in)
 
 function get__articles($title_id)
