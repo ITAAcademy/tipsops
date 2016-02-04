@@ -1,4 +1,9 @@
 <?php
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 include'Models/select_articles.php';
 include'Models/update_revisions.php';
 include 'controller_main_language.php';

@@ -1,4 +1,9 @@
 <?php
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 function UpdateRevisions($id, $value)
 {
     include ('connect/connect.php');

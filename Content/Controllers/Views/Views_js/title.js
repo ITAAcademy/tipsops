@@ -1,3 +1,8 @@
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 $(document).ready(function(){
     // this function change title at click button
     $('button#button').click(function(){

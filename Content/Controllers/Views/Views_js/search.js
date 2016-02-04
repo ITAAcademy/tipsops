@@ -1,5 +1,9 @@
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 $(document).ready(function(){
-
    $('button#button_search').click(function(){
        var text = $('input#search').val();
        var emty = "Результати пошуку";

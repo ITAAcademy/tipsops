@@ -1,4 +1,9 @@
 <?php
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
 function show_list($list){
     $count = count($list);
         echo "<div class='btn-group-justified'>";

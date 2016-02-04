@@ -1,4 +1,9 @@
 <?php
+/**
+ * User: Ivan Pirus
+ * Group: B14
+ * Date: January 2016
+ */
      function get_languages()
      {
         include ('connect/connect.php');
