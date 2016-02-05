@@ -8,7 +8,7 @@ include'Models/select_articles.php';
 include 'controller_main_language.php';
 include 'con_cookie.php';
 
-DeleteCookieWord(); // delete old cookie
+DeleteCookieWord('word'); // delete old cookie
 
 $head_title = $_GET['id'];
 $array_article = GetListArticles($head_title);
