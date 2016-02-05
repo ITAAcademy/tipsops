@@ -9,6 +9,7 @@ include 'controller_main_language.php';
 include'Models/select_articles.php';
 include 'Views/search.php';
 include 'Views/pagination.php';
+include 'con_cookie.php';
 
 if(isset($_GET['key']))
 {
@@ -24,8 +25,9 @@ $select_search = SearchSelect($words);         // get select with db
 $array_result = SearchResult($select_search); //controller get select with db
 if($array_result != false)
 {
+    SaveCookieWorld($words, 'word'); // Save world search in cookie
     PrepareUpdate($array_result); // update reviews article
-    $result = count($array_result);
+    $result = count($array_result); // get numbers result search
     ShowNumbers($result);
     ShowResult($array_result);
     ShowPagination();
