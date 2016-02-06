@@ -12,7 +12,7 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
     var pagination = ''; // Init pagination
 
     $('#articleArea').html('<img src="Content/images/loader.gif" alt="" style=" overflow: auto;margin: auto;position: absolute; top: 0; left: 0; bottom: 0; right: 0;" />'); // Display a processing icon
-    var data = {page: page, per_page: 2}; // Create JSON which will be sent via Ajax
+    var data = {page: page, per_page: 4}; // Create JSON which will be sent via Ajax
     // We set up the per_page var at 4. You may change to any number you need.
 
     $.ajax({ // jQuery Ajax
@@ -25,8 +25,8 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
             $('#articleArea').html(data.articleList); // We update the articleArea DIV with the article list
 
             // Pagination system
-            if (page == 1) pagination += '<div class="cell_disabled"><span>First</span></div><div class="cell_disabled"><span>Previous</span></div>';
-            else pagination += '<div class="cell"><a href="#" id="1">First</a></div><div class="cell"><a href="#" id="' + (page - 1) + '">Previous</span></a></div>';
+            if (page == 1) pagination += '<div class="cell_disabled"><span>Перша</span></div><div class="cell_disabled"><span>Попередня</span></div>';
+            else pagination += '<div class="cell"><a href="#" id="1">Перша</a></div><div class="cell"><a href="#" id="' + (page - 1) + '">Попередня</span></a></div>';
 
             for (var i=parseInt(page)-3; i<=parseInt(page)+3; i++) {
                 if (i >= 1 && i <= data.numPage) {
@@ -37,8 +37,8 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
                 }
             }
 
-            if (page == data.numPage) pagination += '<div class="cell_disabled"><span>Next</span></div><div class="cell_disabled"><span>Last</span></div>';
-            else pagination += '<div class="cell"><a href="#" id="' + (parseInt(page) + 1) + '">Next</a></div><div class="cell"><a href="#" id="' + data.numPage + '">Last</span></a></div>';
+            if (page == data.numPage) pagination += '<div class="cell_disabled"><span>Наступна</span></div><div class="cell_disabled"><span>Остання</span></div>';
+            else pagination += '<div class="cell"><a href="#" id="' + (parseInt(page) + 1) + '">Наступна</a></div><div class="cell"><a href="#" id="' + data.numPage + '">Остання</span></a></div>';
 
             $('#pagination').html(pagination); // We update the pagination DIV
         },
@@ -47,5 +47,6 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
     });
     return false;
 });
+
 
 
