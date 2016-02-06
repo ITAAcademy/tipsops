@@ -58,5 +58,22 @@ function ShowResult($array_article)
         ShowContentSearch($title, $updated, $author, $revisions, $article);
     }
 }
+function PrepareResult($array_article) // prepare result for encode in JSON
+{
+    include"Views/main_content.php";
+    $numbers=count($array_article);//get numbers article
+    $result = "";
+    for( $i=0; $i<$numbers; $i++)
+    {
+        $title = $array_article[$i]['title'];
+        $updated = $array_article[$i]['updated_up'];
+        $article = $array_article[$i]['article'];
+        $author = $array_article[$i]['author'];
+        $revisions = $array_article[$i]['revisions'];
+
+        $result .= PrepareContentSearch($title, $updated, $author, $revisions, $article);
+    }
+    return $result;
+}
 
 

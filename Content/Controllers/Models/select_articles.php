@@ -105,7 +105,7 @@ function GetArticle($title_id) {
     $conn->close(); // close connect
     return $result;
 }
-function SearchSelect($words)
+function SearchSelect($words, $limit, $per_page)
 {
     $query_search = "";
     if($words === "") return false;
@@ -117,7 +117,7 @@ function SearchSelect($words)
         $query_search .= "title LIKE '%$value%' COLLATE utf8_unicode_ci OR
         article LIKE '%$value%' COLLATE utf8_unicode_ci";
     }
-    $query = "SELECT id, title_id, title, author,  article, updated_up, revisions FROM articles WHERE " . $query_search;
+    $query = "SELECT id, title, author, article, updated_up, revisions FROM articles WHERE " . $query_search . " LIMIT ".ToInt($limit);
     //die($query);
     return $query;
 }
@@ -125,7 +125,7 @@ function SearchResult($search_select)
 {
     include 'connect/connect.php';
     $temp = $conn->query($search_select); //the variable $conn connect with file connect.php
-$number = $temp->num_rows;
+    $number = $temp->num_rows;
     $result = array();
 
     if($number > 0) {

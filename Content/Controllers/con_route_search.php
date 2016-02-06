@@ -21,15 +21,15 @@ if($words === "")
     ShowEmpty();
     return;
 }
-$select_search = SearchSelect($words);         // get select with db
+$select_search = SearchSelect($words, 2, 1000);         // get select with db
 $array_result = SearchResult($select_search); //controller get select with db
 if($array_result != false)
 {
     SaveCookieWord($words, 'word'); // Save word search in cookie
-    PrepareUpdate($array_result); // update reviews article
+    //PrepareUpdate($array_result); // update reviews article
     $result = count($array_result); // get numbers result search
-    ShowNumbers($result);
-    ShowResult($array_result);
+    ShowNumbers($result); // show numbers searched result
+   // ShowResult($array_result); // show searched content
     ShowPagination();
 
 }
@@ -38,6 +38,7 @@ else{
     ShowNoSearch($words);
 }
 echo"
+    <script type='text/javascript' src='template/js/jquery-1.12.0.js'></script>
     <script type='text/javascript' src='Content/Controllers/Views/Views_js/pagination.js'></script>
     ";
 
