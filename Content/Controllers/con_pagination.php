@@ -10,7 +10,7 @@ include 'Models/select_articles.php';
 include 'con_cookie.php';
 
 if($_POST)
-{echo("test");
+{
     $page = $_POST['page']; // Current page number
     $per_page = $_POST['per_page']; // Articles per page
     if ($page != 1) $start = ($page-1) * $per_page;
@@ -20,8 +20,8 @@ if($_POST)
 
     $select_search = SearchSelect($words, $start, $per_page);         // get select with db
     $array_result = SearchResult($select_search); //controller get select with db
-    $numArticles = count($array_result); // get numbers result search
-    $numPage = $numArticles / $per_page; // Total number of page for pagination
+    $numArticles = GetCookieWord('searched'); // get numbers result search
+    $numPage = ceil($numArticles / $per_page); // Total number of page for pagination
 
     $articleList = PrepareResult($array_result); // prepare content article
 

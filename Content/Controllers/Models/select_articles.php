@@ -105,7 +105,7 @@ function GetArticle($title_id) {
     $conn->close(); // close connect
     return $result;
 }
-function SearchSelect($words, $limit, $per_page)
+function SearchSelect($words, $start, $per_page)
 {
     $query_search = "";
     if($words === "") return false;
@@ -117,7 +117,7 @@ function SearchSelect($words, $limit, $per_page)
         $query_search .= "title LIKE '%$value%' COLLATE utf8_unicode_ci OR
         article LIKE '%$value%' COLLATE utf8_unicode_ci";
     }
-    $query = "SELECT id, title, author, article, updated_up, revisions FROM articles WHERE " . $query_search . " LIMIT ".ToInt($limit);
+    $query = "SELECT id, title, author, article, updated_up, revisions FROM articles WHERE " . $query_search . " LIMIT ".ToInt($start). "," .ToInt($per_page);
     //die($query);
     return $query;
 }
