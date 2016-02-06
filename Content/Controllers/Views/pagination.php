@@ -8,6 +8,7 @@
 function ShowPagination()
 {
     echo"
+    <div id=\"articleArea\"></div> <!-- Where articles appear -->
     <div id='pagination'>Pagination
             <!-- Just tell the system we start with page 1 (id=1) -->
             <!-- See the .js file, we trigger a click when page is loaded -->
