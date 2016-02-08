@@ -15,7 +15,6 @@ if($_POST)
     $per_page = $_POST['per_page']; // Articles per page
     if ($page != 1) $start = ($page-1) * $per_page;
     else $start=0;
-
     $words = GetCookieWord('word'); 
 
     $select_search = SearchSelect($words, $start, $per_page);         // get select with db
