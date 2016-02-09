@@ -5,9 +5,9 @@
  * Date: 05.02.2016
  * Time: 18:28
  */
-function SaveCookieWord($world, $name)
+function SaveCookieWord($word, $name)
 {
-   setcookie($name, $world, time()+3600*24, "/");
+   setcookie($name, $word, time()+3600*24*7, "/"); // The time life is 1 week
 }
 function DeleteCookieWord($name)
 {
@@ -23,4 +23,9 @@ function GetCookieWord($name)
         return $_COOKIE[$name];
     }
     return "";
+}
+function UpdateCookieWord($word, $name)
+{
+    DeleteCookieWord($name);
+    SaveCookieWord($word, $name);
 }
