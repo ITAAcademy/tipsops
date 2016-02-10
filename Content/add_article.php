@@ -13,11 +13,11 @@ $editors = $_POST['editor1'];
 $previe = strip_tags($_POST['editor1']);
 $previe = substr($previe,0,500);
 $previe = substr($previe, 0, strrpos($previe, ' '));
-$resault = "INSERT INTO articles(title_id,title,author, preview_article,article, created_up)
-                        VALUES ((SELECT id FROM languages WHERE title='$catalog'),'$titels','$authors','$previe','$editors','$dates');";
+$resault = "INSERT INTO articles(title_id,title,author, preview_article,article, created_up,updated_up)
+                        VALUES ((SELECT id FROM languages WHERE title='$catalog'),'$titels','$authors','$previe','$editors','$dates',NOW());";
 
 if(isset($_POST['add_article'])){
     mysqli_query($conn, $resault);
-    echo '<a href="../index.html">Повернутись на головну сторінку</a>';
+    header("Location: ../text_editor.html");
 }else {echo "Error writing";}
 ?>
