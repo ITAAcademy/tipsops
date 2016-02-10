@@ -25,7 +25,6 @@ function show__content($title, $date, $author, $revisions, $articles)
 
 function ShowPreviewArticle($title, $preview_article, $id)
 {
-    $preview_article .= "...";
     echo"<h3 class='title' id='title_articles'>$title</h3>
          <div class='preview_article'>$preview_article</div>
          <button type='button' name='$id' class='btn btn-default btn-sm' id='detailed_articles'>Детальніше</button>

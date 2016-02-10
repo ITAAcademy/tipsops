@@ -9,15 +9,14 @@ $catalog = $_POST['sel1'];
 $titels = $_POST['inp1'];
 $authors = $_POST['inp2'];
 $dates = $_POST['date'];
-$editors = $_POST['editor1'];
-$previe = strip_tags($_POST['editor1']);
-$previe = substr($previe,0,500);
-$previe = substr($previe, 0, strrpos($previe, ' '));
-$resault = "INSERT INTO articles(title_id,title,author, preview_article,article, created_up,updated_up)
-                        VALUES ((SELECT id FROM languages WHERE title='$catalog'),'$titels','$authors','$previe','$editors','$dates',NOW());";
+$editors = strip_tags($_POST['editor1']);
+$previe = substr($editors,0,500);
+$previe1 = substr($previe, 0, strrpos($previe, ' '));
+$resault = "INSERT INTO articles(title_id,title,author, preview_article,article, created_up)
+                        VALUES ((SELECT id FROM languages WHERE title='$catalog'),'$titels','$authors','$previe1','$editors','$dates');";
 
 if(isset($_POST['add_article'])){
     mysqli_query($conn, $resault);
-    header("Location: ../text_editor.html");
+    echo '<a href="../index.html">Повернутись на головну сторінку</a>';
 }else {echo "Error writing";}
 ?>
