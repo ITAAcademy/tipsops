@@ -1,4 +1,7 @@
-.admin-table{
+/**
+ * User: Khupchenko Oleksander
+ */
+.table-striped{
     width: 100%;
     background-color: #fff6bf;
 }

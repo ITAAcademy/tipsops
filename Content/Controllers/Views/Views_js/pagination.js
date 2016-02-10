@@ -12,13 +12,8 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
     var pagination = ''; // Init pagination
 
     $('#articleArea').html('<img src="Content/images/loader.gif" alt="" style=" overflow: auto;margin: auto;position: absolute; top: 0; left: 0; bottom: 0; right: 0;" />'); // Display a processing icon
-    //ajax, get value for pagination
-    $.get('Content/Controllers/ajax_type_pagination.php', {type: 'type'}, function(data){
-        var per_page_ajax = 1e+6; // default value for pagination
-        per_page_ajax = parseInt(data);
-    });
-    var data = {page: page, per_page: per_page_ajax}; // Create JSON which will be sent via Ajax
-
+    var data = {page: page, per_page: 4}; // Create JSON which will be sent via Ajax
+    // We set up the per_page var at 4. You may change to any number you need.
 
     $.ajax({ // jQuery Ajax
         type: 'POST',

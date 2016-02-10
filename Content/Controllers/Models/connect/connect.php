@@ -7,7 +7,7 @@
 $server_name = "localhost";
 $user_name = "root";
 $password ="";
-$db="new_tipsops";
+$db="tips_02.02.2016";
 
 $conn = new mysqli($server_name, $user_name, $password, $db);
 mysqli_set_charset($conn, "utf8");

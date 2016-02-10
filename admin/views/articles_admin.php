@@ -1,4 +1,7 @@
 <?php
+/**
+ * User: Khupchenko Oleksander
+ */
 require_once("../../Content/Controllers/Models/connect/connect.php");
 require_once("../models/articles.php");
 $articles = articles_all($conn);
@@ -8,7 +11,7 @@ $articles = articles_all($conn);
     <head>
         <meta charset="utf-8">
         <title>Tipsops</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     </head>
     <body>
@@ -23,18 +26,19 @@ $articles = articles_all($conn);
                     <th></th>
                 </tr>
                 <?php
+                $i = 1;
                 foreach($articles as $a):?>
     <tr>
-        <th><?=$a['id']?></th>
+        <th><?= $i; ?></th>
         <th><a><?=$a['title']?></a></th>
         <th>
             <a href="index.php?action=edit&id=<?=$a['id']?>">Редагувати</a>
         </th>
         <th>
-            <a href="index.php?action=delete&id=<?=$a['id']?>">Видалити</a>
+            <a href="../controllers_admin.php?action=delete_article&id=<?=$a['id']?>">Видалити</a>
         </th>
     </tr>
-<?php endforeach ?>
+<?php $i++; endforeach ?>
 </table>
 </div>
 <div><a href="../index.php">Назад</a></div>

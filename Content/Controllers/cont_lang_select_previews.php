@@ -10,8 +10,6 @@ include 'con_cookie.php';
 
 DeleteCookieWord('word'); // delete old cookie
 
-UpdateCookieWord('language', 'language_search'); // Update result look
-
 $head_title = $_GET['id'];
 $array_article = GetListArticles($head_title);
 ShowListArticles($array_article, $head_title);
