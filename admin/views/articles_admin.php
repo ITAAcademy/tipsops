@@ -1,3 +1,8 @@
+<?php
+require_once("../../Content/Controllers/Models/connect/connect.php");
+require_once("../models/articles.php");
+$articles = articles_all($conn);
+?>
 <DOCTYPE html>
     <html>
     <head>
@@ -10,33 +15,32 @@
     <div class="container">
         <h1>Tipsops</h1>
         <div>
-            <table class="admin-table">
+            <table class="table table-striped">
                 <tr>
                     <th>№</th>
-                    <th>Тип</th>
                     <th>Назва</th>
                     <th></th>
                     <th></th>
                 </tr>
-                <?php foreach($articles as $a):?>
-                    <tr>
-                        <th><?=$a['id']?></th>
-                        <th><?=$a['title_id']?></th>
-                        <th><?=$a['title']?></th>
-                        <th>
-                            <a href="index.php?action=edit&id=<?=$a['id']?>">Редагувати</a>
-                        </th>
-                        <th>
-                            <a href="index.php?action=delete&id=<?=$a['id']?>">Видалити</a>
-                        </th>
-                    </tr>
-                <?php endforeach ?>
-            </table>
-
-        </div>
-        <footer>
-            <p>Tipsops<br>Copyright &copy; 2016</p>
-        </footer>
-    </div>
-    </body>
-    </html>
+                <?php
+                foreach($articles as $a):?>
+    <tr>
+        <th><?=$a['id']?></th>
+        <th><a><?=$a['title']?></a></th>
+        <th>
+            <a href="index.php?action=edit&id=<?=$a['id']?>">Редагувати</a>
+        </th>
+        <th>
+            <a href="index.php?action=delete&id=<?=$a['id']?>">Видалити</a>
+        </th>
+    </tr>
+<?php endforeach ?>
+</table>
+</div>
+<div><a href="../index.php">Назад</a></div>
+<footer>
+    <p>Tipsops<br>Copyright &copy; 2016</p>
+</footer>
+</div>
+</body>
+</html>
