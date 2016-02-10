@@ -26,7 +26,6 @@ $array_result = SearchResult($select_search); //controller get select with db
 if($array_result != false)
 {
     SaveCookieWord($words, 'word'); // Save word search in cookie
-    UpdateCookieWord('search', 'language_search'); // Update result look
     //PrepareUpdate($array_result); // update reviews article
     $result = count($array_result); // get numbers result search
     DeleteCookieWord('searched');
