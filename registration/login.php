@@ -49,7 +49,7 @@
 
                 echo '
 
-                <form class="form-horizontal" role="form" id="log_form" name="log_form">
+                <form class="form-horizontal" role="form" id="log_form" name="log_form"  method="POST" action="javascript:void(null);" onsubmit="logins()">
                 <h5 align="center"><b>Увійти на сайт</b></h5>
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="log_login">Логін:</label>
@@ -72,7 +72,7 @@
                   </div>
                   <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                      <button type="button" class="btn btn-success">Увійти</button>
+                      <input type="submit" class="btn btn-success" value="Увійти"/>
                       <button type="button" class="btn btn-info" id="log_reg_button">Зареєструватися</button>
                     </div>
                   </div>

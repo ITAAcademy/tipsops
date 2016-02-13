@@ -13,7 +13,7 @@
 //else{
     echo '
 
-                  <form class="form-horizontal" role="form" id="reg_form" style="display:none;" method="POST"  action="javascript:void(null);" onsubmit="call()" >
+                  <form class="form-horizontal" role="form" id="reg_form" style="display:none;" method="POST"  action="javascript:void(null);" onsubmit="registrations()" >
                   <h5 align="center"><b>Зареєструватися</b></h5>
                   <div class="form-group">
                     <label class="control-label col-sm-2" for="reg_login">Логін:</label>
