@@ -3,11 +3,13 @@
 $form_login=$_POST["log_login"];
 $form_password=$_POST["log_pwd"];
 
+//echo  $form_login ;
+//echo "<br/>";
+//echo  $form_password ;
+
 //Connect to db and looking login and password user
 //if user exist login
 //if not exist echo "Login or password are wrong"
-
-include('../Content/Controllers/Models/connect/connect.php'); //include to model data base
 
 
 if(empty($form_login)==false && empty($form_password)==false)
@@ -22,3 +24,5 @@ if(empty($form_login)==false && empty($form_password)==false)
 }else{
     echo "Error login or password. Try again later.";
 }
+
+//echo 'Hello login_logic';
