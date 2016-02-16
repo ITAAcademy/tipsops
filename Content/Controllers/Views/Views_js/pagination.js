@@ -23,8 +23,6 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
 
         var data = {page: page, per_page: per_page_ajax}; // Create JSON which will be sent via Ajax
 
-        // We set up the per_page var at 4. You may change to any number you need.
-
             $.ajax({ // jQuery Ajax
                 type: 'POST',
                 url: 'Content/Controllers/con_pagination.php', // URL to the PHP file which will insert new value in the database
