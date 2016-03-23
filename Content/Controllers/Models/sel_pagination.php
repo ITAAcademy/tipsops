@@ -7,7 +7,7 @@
  */
 function GetFirstArticle()
 {
-    $sql = "SELECT MIN(id) FROM articles";
+    $sql = "SELECT MIN(id) FROM tips_articles";
     $temp = $conn->query($sql); //the variable $conn connect with file connect.php
     $number = $temp->num_rows;
     if($number>0)

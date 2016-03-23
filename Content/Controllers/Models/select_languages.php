@@ -8,7 +8,7 @@
      {
         include ('connect/connect.php');
 
-        $sql = ("SELECT title FROM languages");
+        $sql = ("SELECT title FROM tips_languages");
          $temp = $conn->query($sql);    //the variable $conn connect with file connect.php
 
 

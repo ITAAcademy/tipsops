@@ -6,7 +6,7 @@ function get__firstLanguages()
 {
     include ('connect/connect.php');
 
-    $sql = ("SELECT title FROM languages LIMIT 1;");
+    $sql = ("SELECT title FROM tips_languages LIMIT 1;");
     $temp = $conn->query($sql); //the variable $conn connect with file connect.php
 
    // $result_array = array();

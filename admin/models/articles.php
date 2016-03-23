@@ -5,12 +5,12 @@
 //include '../../Content/Controllers/Models/connect/security_from_injections.php';
 
 function articles_type_list($conn){
-    $query = "SELECT * FROM languages ORDER BY id";
+    $query = "SELECT * FROM tips_languages ORDER BY id";
     $result = mysqli_query($conn, $query);
 
     if(!$result) die(mysqli_error($conn));
 
-    // Извлечение из БД
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
     $n = mysqli_num_rows($result);
     $articles = array();
 
@@ -26,7 +26,7 @@ function articles_type_add($conn, $title){
     if($title == '')
         return false;
 
-    $t = "INSERT INTO languages (title) VALUES ('%s')";
+    $t = "INSERT INTO tips_languages (title) VALUES ('%s')";
     $query = sprintf($t, mysqli_real_escape_string($conn, $title));
     echo $query;
     $result = mysqli_query($conn, $query);
@@ -38,13 +38,13 @@ function articles_type_add($conn, $title){
 }
 
 function articles_all($conn){
-    // Запрос
-    $query = "SELECT * FROM articles";
+    // пїЅпїЅпїЅпїЅпїЅпїЅ
+    $query = "SELECT * FROM tips_articles";
     $result = mysqli_query($conn, $query);
 
     if(!$result) die(mysqli_error($conn));
 
-    // Извлечение из БД
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅ
     $n = mysqli_num_rows($result);
     $articles = array();
 
@@ -57,12 +57,12 @@ function articles_all($conn){
 
 function article_delete($conn, $id){
     $id = (int)$id;
-    // Проверка
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     if($id == 0)
         return false;
 
-    // Запрос
-    $query = sprintf("DELETE FROM articles WHERE id='%d'", $id);
+    // пїЅпїЅпїЅпїЅпїЅпїЅ
+    $query = sprintf("DELETE FROM tips_articles WHERE id='%d'", $id);
     $result = mysqli_query($conn, $query);
 
     if(!$result)
@@ -73,12 +73,12 @@ function article_delete($conn, $id){
 
 function articles_type_delete($conn, $id){
     $id = (int)$id;
-    // Проверка
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     if($id == 0)
         return false;
 
-    // Запрос
-    $query = sprintf("DELETE FROM languages WHERE id='%d'", $id);
+    // пїЅпїЅпїЅпїЅпїЅпїЅ
+    $query = sprintf("DELETE FROM tips_languages WHERE id='%d'", $id);
     $result = mysqli_query($conn, $query);
 
     if(!$result)

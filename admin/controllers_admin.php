@@ -3,7 +3,7 @@
  * User: Khupchenko Oleksander
  */
 require_once("../Content/Controllers/Models/connect/connect.php");
-require_once("models/articles.php");
+require_once("models/select_articles.php");
 
 if(isset($_GET['action']))
     $action = $_GET['action'];

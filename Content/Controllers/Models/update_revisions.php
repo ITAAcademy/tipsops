@@ -8,7 +8,7 @@ function UpdateRevisions($id, $value)
 {
     include ('connect/connect.php');
     $value_pro = sip($value);
-    $sql = "UPDATE articles SET revisions = ".$value_pro." WHERE id=".sip($id);
+    $sql = "UPDATE tips_articles SET revisions = ".$value_pro." WHERE id=".sip($id);
     if ($conn->query($sql) === FALSE) { //the variable $conn connect with file connect.php
         die("Error updating record:  UpdateRevisions()");
     }
@@ -17,7 +17,7 @@ function UpdateRevisions($id, $value)
 function SelectRevisions($id)
 {
     include ('connect/connect.php');
-    $sql = "SELECT revisions FROM articles WHERE id=".sip($id);
+    $sql = "SELECT revisions FROM tips_articles WHERE id=".sip($id);
 
     $temp = $conn->query($sql);    //the variable $conn connect with file connect.php
     $row = $temp->fetch_array();

@@ -20,6 +20,7 @@ $(document).ready(function(){
         var empty = "";
         $('input#search').val(empty);
         $.get('Content/Controllers/cont_lang_select_previews.php?', {id: title}, function(data){
+				window.location.hash=title;
                 $('div.main_content').html(data);
                 });
 

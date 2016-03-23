@@ -1,4 +1,18 @@
 <?php
+session_start();
+$id = next($_SESSION);
+$id = current($_SESSION);
+
+if(($id)){
+    var_dump($id);
+}else{
+    header('Location: ../index.html');
+    exit;
+
+}
+
+?>
+<?php
 /**
  * User: Khupchenko Oleksander
  */
