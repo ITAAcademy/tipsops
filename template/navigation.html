@@ -7,8 +7,7 @@ $id_admin = (integer) $id;
 include '../Content/Controllers/Models/connect/connect.php';
 
 $result = "SELECT id_user FROM user_admin WHERE id_user='$id_admin'";
-$id_admin = $conn->query($result);
-
+$id_admin = mysqli_query($conn, $result);
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu_backround">
     <div class="container">
