@@ -26,8 +26,11 @@ $id_admin = $conn->query($result);
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?php Content/SessionEditor.php ?>">Добавити нову статтю</a>
-
+                    <?php
+                    if(($id)){
+                        echo '<a href="text_editor.html">Добавити нову статтю</a>';
+                        }
+                    ?>
                 </li>
                 <li>
                     <a href="about.html">Про нас</a>
