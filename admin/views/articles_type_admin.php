@@ -8,7 +8,7 @@
     </head>
     <body>
     <div class="container">
-        <h1>Tipsops</h1>
+        <a href="../index.html"><img src="../template/images/Logo_bigUA.png" style="width:150px;height:45px;"></a>
         <div>
             <table class="table table-striped">
                 <tr>

@@ -20,25 +20,25 @@ $id_admin = mysqli_query($conn, $result);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="../../css/images/Logo_bigEN.png" style="width:150px;height:45px;"></a>
+            <a class="navbar-brand" href="index.html"><img src="template/images/Logo_bigUA.png" style="width:150px;height:45px;"></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li>
+                <li style="top: 15px;">
                     <?php
                     if(($id)){
-                        echo '<a href="text_editor.html">Добавити нову статтю</a>';
+                        echo '<a href="text_editor.html" >Добавити нову статтю</a>';
                         }
                     ?>
                 </li>
-                <li>
+                <li style="top: 15px;">
                     <a href="about.html">Про нас</a>
                 </li>
-                <li>
+                <li style="top: 15px;">
                     <a href="#">Контакти</a>
                 </li>
-                <li>
+                <li style="top: 15px;">
                     <?php
                     if($id_admin->num_rows > 0){
                     echo '<a href="admin/index.php">Панель адміністратора</a>';

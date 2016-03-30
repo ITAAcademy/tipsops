@@ -16,7 +16,7 @@ $articles = articles_all($conn);
     </head>
     <body>
     <div class="container">
-        <h1>Tipsops</h1>
+        <img src="../template/images/Logo_bigUA.png" style="width:150px;height:45px;">
         <div>
             <table class="table table-striped">
                 <tr>
