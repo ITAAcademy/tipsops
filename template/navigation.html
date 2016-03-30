@@ -40,9 +40,10 @@ $id_admin = mysqli_query($conn, $result);
                 </li>
                 <li style="top: 15px;">
                     <?php
-                    if($id_admin->num_rows > 0){
-                    echo '<a href="admin/index.php">Панель адміністратора</a>';
-                    } ?>
+                    if((mysqli_num_rows($id_admin) > 0)){
+                        print_r ('<a href="admin/index.php">Панель адміністратора</a>');
+                    }
+                    ?>
                 </li>
             </ul>
         </div>
