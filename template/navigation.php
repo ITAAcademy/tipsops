@@ -36,7 +36,7 @@ $id_admin = mysqli_query($conn, $result);
                     <a href="about.html">Про нас</a>
                 </li>
                 <li style="top: 15px;">
-                    <a href="#">Контакти</a>
+                    <a href="contact.html">Контакти</a>
                 </li>
                 <li style="top: 15px;">
                     <?php
