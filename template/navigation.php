@@ -33,7 +33,7 @@ $id_admin = mysqli_query($conn, $result);
                     ?>
                 </li>
                 <li style="top: 15px;">
-                    <a href="about.html">Про нас</a>
+                    <a href="http://qa.intita.com/aboutus">Про нас</a>
                 </li>
                 <li style="top: 15px;">
                     <a href="contact.html">Контакти</a>
