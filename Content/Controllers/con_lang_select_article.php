@@ -18,7 +18,7 @@ UpdateRevisions($head_title, $value); //update revisions articles
 $array_article = GetArticle($head_title);
 ShowSelectArticles($array_article);
 echo"<script src='Content/Controllers/Views/Views_js/articles.js'></script>";
-
+echo"<script src='Content/Controllers/Views/Views_js/copy_url.js'></script>";
 
 
 ?>
