@@ -14,7 +14,8 @@ function show__content($title, $date, $author, $revisions, $articles)
         <span class='glyphicon glyphicon-time'></span><font-text>&nbsp; Дата: $date &nbsp;</font-text>
         <span class='glyphicon glyphicon-user'></span><font-text>&nbsp; Автор: $author &nbsp;</font-text>
         <span class='glyphicon glyphicon-eye-open'></span><font-text>&nbsp; Переглядів: $revisions &nbsp;</font-text>
-        <button  type='button' id='CopyURL' name='CopyURL' class='btn btn-default btm-sm'>Копіювання URL</button>
+        <button id='CopyURL' name='CopyURL' class='btn btn-default btm-sm'
+        data-clipboard-text='";echo"http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];echo"'>Копіювання URL</button>
      </div>
    <div class='article'>$articles</div>
    <button  type='button' id='all_arlicles' name='$title' class='btn btn-default btm-sm'>Показати всі статті</button>
@@ -42,7 +43,8 @@ function ShowContentSearch($title, $date, $author, $revisions, $articles)
         <span class='glyphicon glyphicon-time'></span><font-text>&nbsp; Дата: $date &nbsp;</font-text>
         <span class='glyphicon glyphicon-user'></span><font-text>&nbsp; Автор: $author &nbsp;</font-text>
         <span class='glyphicon glyphicon-eye-open'></span><font-text>&nbsp; Переглядів: $revisions &nbsp;</font-text>
-        <button  type='button' id='CopyURL' name='CopyURL' class='btn btn-default btm-sm'>Копіювання URL</button>
+        <button  id='CopyURL' name='CopyURL' class='btn btn-default btm-sm'
+        data-clipboard-text='";echo"http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];echo"'>Копіювання URL</button>
      </div>
    <div class='article'>$articles</div>
    <hr/>
@@ -55,11 +57,13 @@ function PrepareContentSearch($title, $date, $author, $revisions, $articles) {
         <span class='glyphicon glyphicon-time'></span><font-text>&nbsp; Дата: $date &nbsp;</font-text>
         <span class='glyphicon glyphicon-user'></span><font-text>&nbsp; Автор: $author &nbsp;</font-text>
         <span class='glyphicon glyphicon-eye-open'></span><font-text>&nbsp; Переглядів: $revisions &nbsp;</font-text>
-        <button  type='button' id='CopyURL' name='CopyURL' class='btn btn-default btm-sm'>Копіювання URL</button>
+        <button id='CopyURL' name='CopyURL' class='btn btn-default btm-sm'
+        data-clipboard-text='";echo"http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];echo"'>Копіювання URL</button>
      </div>
    <div class='article'>$articles</div>
    <hr/>
    ";
     return $result;
 }
+
 ?>
