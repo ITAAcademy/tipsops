@@ -18,29 +18,17 @@ if($name>0) {
 ?>
 <form method="POST" action="Content/add_article.php" accept-charset="utf-8"  >
     <div class="form-group">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
             <label for="sel1">Оберіть категорію статтей:</label>
             <script>getHtml('Content/Controllers/controller_block_select.php');</script>
 
             <label for="inp1">Введіть назву статті:</label>
             <input type="text" class="form-control" id="inp1" name="inp1">
-        </div>
-        <div class="col-lg-6">
-            <label for="inp1">Автора статті:</label>
             </br>
-            <p>
-                <?php echo $author[0][0]?>
-            </p>
-
-            <label for="inp1">Дата:</label>
+            <label>Автора статті:</label> <?php echo $author[0][0];?>
             </br>
-            <p id="date"></br>
-                <script>
-                    var d = new Date();
-                    document.getElementById("date").innerHTML = d.toLocaleDateString();
-                </script>
-             </p></br></br>
-
+            <label for="inp1">Дата:</label> <?php echo date("d-m-Y");?>
+            </br>
         </div>
         <p>
             <textarea id="editor1" name="editor1"></textarea>
@@ -48,8 +36,6 @@ if($name>0) {
                 CKEDITOR.replace( 'editor1' );
             </script>
         </p>
-
-
         <p>
             <button type="submit" class="btn btn-primary" name = "add_article" >Зберегти статтю</button>
         </p>
