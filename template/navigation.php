@@ -5,6 +5,8 @@ $id = current($_SESSION);
 $id_admin = (integer) $id;
 
 include '../Content/Controllers/Models/connect/connect.php';
+$result_id = "SELECT id FROM user WHERE id='$id'";
+$id_students = mysqli_query($conn,$result_id);
 
 $result = "SELECT id_user FROM user_admin WHERE id_user='$id_admin'";
 $id_admin = mysqli_query($conn, $result);
@@ -27,8 +29,8 @@ $id_admin = mysqli_query($conn, $result);
             <ul class="nav navbar-nav">
                 <li style="top: 15px;">
                     <?php
-                    if(($id)){
-                        print_r ('<a href="text_editor.html" >Добавити нову статтю</a>');
+                    if(mysqli_num_rows($id_students)>0){
+                        print_r ('<a href="text_editor.php" >Добавити нову статтю</a>');
                     }
                     ?>
                 </li>

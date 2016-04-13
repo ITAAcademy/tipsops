@@ -27,17 +27,20 @@ if($name>0) {
         </div>
         <div class="col-lg-6">
             <label for="inp1">Автора статті:</label>
+            </br>
             <p>
                 <?php echo $author[0][0]?>
             </p>
 
             <label for="inp1">Дата:</label>
-            <p id="date">
+            </br>
+            <p id="date"></br>
                 <script>
                     var d = new Date();
                     document.getElementById("date").innerHTML = d.toLocaleDateString();
                 </script>
-             </p></br>
+             </p></br></br>
+
         </div>
         <p>
             <textarea id="editor1" name="editor1"></textarea>
