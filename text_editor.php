@@ -3,6 +3,7 @@
 <head>
     <script src="Content/scripts/getHtmlFromFile.js"></script>
     <script>getHtml('template/head.html');</script>
+    <script type="text/javascript" src="editor/ckeditor/ckeditor.js"></script>
     <title>Tipsops</title>
 </head>
 <body>
@@ -12,8 +13,8 @@
 <div class="container">
     <div class="row">
         <!-- Blog Post Content Column -->
-        <div class="col-lg-8" >
-            <script>getHtml('Content/Contact.html');</script>
+        <div class="col-lg-8">
+            <script>getHtml('Content/text_editor.php');</script>
         </div>
         <!-- Blog Sidebar Widgets Column -->
     </div>
