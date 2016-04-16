@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `tips_articles` (
   `preview_article` text CHARACTER SET utf8 COLLATE utf8_bin,
   `article` text CHARACTER SET utf8 COLLATE utf8_bin,
   `created_up` date NOT NULL,
-  `updated_up` datetime DEFAULT NULL,
+  `updated_up` date DEFAULT NULL,
   `revisions` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
