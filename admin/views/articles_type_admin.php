@@ -29,10 +29,10 @@
                 <?php $i++; endforeach ?>
             </table>
             <div><a href="../admin/index.php?action=add">Добавити новий тип</a></div>
-            <div><a href="../../tipsops/index.html">Повернутись на головну сторінку</a></div>
+            <div><a href="../../tips/index.html">Повернутись на головну сторінку</a></div>
         </div>
         <footer>
-            <p>Tipsops<br>Copyright &copy; 2016</p>
+            <p style="text-align: center;">Tipsops<br>Copyright &copy; 2016</p>
         </footer>
     </div>
     </body>
