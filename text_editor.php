@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row">
         <!-- Blog Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <script>getHtml('Content/text_editor.php');</script>
         </div>
         <!-- Blog Sidebar Widgets Column -->
