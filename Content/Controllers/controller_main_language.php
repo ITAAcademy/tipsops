@@ -43,6 +43,18 @@ function ShowSelectArticles($array_article)
 
         show__content($title, $updated, $author, $revisions, $article);
 }
+function ShowNewArticles($array_article)
+{
+    include"Views/main_content.php";
+
+    $title = $array_article[0]['title'];
+    $updated = $array_article[0]['updated_up'];
+    $article = $array_article[0]['article'];
+    $author = $array_article[0]['author'];
+
+    show_new_article($title, $updated, $author, $article);
+}
+
 function ShowResult($array_article)
 {
     include"Views/main_content.php";

@@ -25,6 +25,20 @@ function show__content($title, $date, $author, $revisions, $articles)
 
 }
 
+function show_new_article($title, $date, $author, $articles)
+{
+
+//    foreach($articles as $art_){
+    echo"<h3 class='title'>$title</h3>
+     <div class='data_article'>
+        <span class='glyphicon glyphicon-time'></span><font-text>&nbsp; Дата: $date &nbsp;</font-text>
+        <span class='glyphicon glyphicon-user'></span><font-text>&nbsp; Автор: $author &nbsp;</font-text>
+     </div>
+   <div class='article'>$articles</div>
+   <hr/>";
+//    }
+
+}
 function ShowPreviewArticle($title, $preview_article, $id)
 {
     $preview_article .= "...";

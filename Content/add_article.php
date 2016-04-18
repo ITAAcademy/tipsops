@@ -5,7 +5,6 @@ $id = next($_SESSION);
 $id = current($_SESSION);
 $id_name = (integer) $id;
 
-
 include '../Content/Controllers/Models/connect/connect.php';
 
 $sql = "SELECT firstName, secondName FROM user WHERE id='$id_name'";
@@ -34,7 +33,6 @@ $resault = "INSERT INTO tips_articles(title_id,title,author, preview_article,art
 if(isset($_POST['add_article'])){
     include 'Controllers/Models/connect/connect.php';
     mysqli_query($conn, $resault);
-    //echo $authors;
-    header("Location: ../text_editor.php");
+    header("Location: ../new_article.php");
 }else {echo "Error writing";}
 ?>
