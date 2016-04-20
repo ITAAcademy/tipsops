@@ -64,16 +64,13 @@ function ShowContentSearch($title, $date, $author, $revisions, $articles)
    <hr/>
    ";
 }
-function PrepareContentSearch($title, $date, $author, $revisions, $articles) {
+function PrepareContentSearch($title, $date, $author, $articles) {
     $result = "
     <h3 class='title'>$title</h3>
      <div class='data_article'>
         <span class='glyphicon glyphicon-time'></span><font-text>&nbsp; Дата: $date &nbsp;</font-text>
         <span class='glyphicon glyphicon-user'></span><font-text>&nbsp; Автор: $author &nbsp;</font-text>
-        <span class='glyphicon glyphicon-eye-open'></span><font-text>&nbsp; Переглядів: $revisions &nbsp;</font-text>
-        <button id='CopyURL' name='CopyURL' class='btn btn-default btm-sm'
-        data-clipboard-text='";echo"http://".$_SERVER["HTTP_HOST"].$_SERVER["REQUEST_URI"];echo"'>Копіювання URL</button>
-     </div>
+	</div>
    <div class='article'>$articles</div>
    <hr/>
    ";
