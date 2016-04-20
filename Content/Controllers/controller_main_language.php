@@ -81,9 +81,9 @@ function PrepareResult($array_article) // prepare result for encode in JSON
         $updated = $array_article[$i]['updated_up'];
         $article = $array_article[$i]['article'];
         $author = $array_article[$i]['author'];
-        $revisions = $array_article[$i]['revisions'];
 
-        $result .= PrepareContentSearch($title, $updated, $author, $revisions, $article);
+
+        $result .= PrepareContentSearch($title, $updated, $author, $article);
     }
     return $result;
 }
