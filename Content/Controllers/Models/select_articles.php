@@ -105,6 +105,24 @@ function GetArticle($title_id) {
     $conn->close(); // close connect
     return $result;
 }
+
+function NewArticle() {
+    include 'connect/connect.php';
+    $sql = "SELECT id, title, author,  article, updated_up, revisions FROM tips_articles  WHERE id =(SELECT MAX(id) FROM tips_articles);";
+    $temp = $conn->query($sql); //the variable $conn connect with file connect.php
+    $number = $temp->num_rows;
+    $result = array();
+    if($number > 0) {
+        for ($i = 0; $i < $number; $i++) {
+            $result[$i] = $temp->fetch_array();
+        }
+    } else {
+        die("SQL: Select is not successful: NewArticle");
+    }
+    $temp->close(); // free memory
+    $conn->close(); // close connect
+    return $result;
+}
 function SearchSelect($words, $start, $per_page)
 {
     $query_search = "";
