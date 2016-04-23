@@ -2,7 +2,7 @@
 /**
  * User: Khupchenko Oleksander
  */
-require_once("../../Content/Controllers/Models/connect/connect.php");
+require_once("../../content/controllers/models/connect/connect.php");
 require_once("../models/articles.php");
 $articles = articles_all($conn);
 ?>
@@ -16,7 +16,7 @@ $articles = articles_all($conn);
     </head>
     <body>
     <div class="container">
-        <img src="../template/images/Logo_bigUA.png" style="width:150px;height:45px;">
+        <img src="../../template/images/Logo_bigUA.png" style="width:150px;height:45px;">
         <div>
             <table class="table table-striped">
                 <tr>
