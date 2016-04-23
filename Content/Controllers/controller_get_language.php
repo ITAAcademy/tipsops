@@ -4,7 +4,7 @@
  * Group: B14
  * Date: January 2016
  */
-include'Models/select_articles.php';
+include'models/select_articles.php';
 include 'controller_main_language.php';
 include 'con_cookie.php';
 

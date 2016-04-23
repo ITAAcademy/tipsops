@@ -2,7 +2,7 @@
 /**
  * User: Khupchenko Oleksander
  */
-//include '../../Content/Controllers/Models/connect/security_from_injections.php';
+//include '../../content/controllers/models/connect/security_from_injections.php';
 
 function articles_type_list($conn){
     $query = "SELECT * FROM tips_languages ORDER BY id";

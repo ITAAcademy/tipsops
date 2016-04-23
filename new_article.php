@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="Content/scripts/getHtmlFromFile.js"></script>
-    <script src="Content/scripts/HideAndDisplayNew.js"></script>
+    <script src="content/scripts/getHtmlFromFile.js"></script>
+    <script src="content/scripts/HideAndDisplayNew.js"></script>
 
 
     <script>getHtml('template/head.html');</script>
@@ -17,7 +17,7 @@
     <div class="row" class="main">
         <!-- Blog Post Content Column -->
         <div class="col-lg-8" >
-            <script>getHtml('Content/show_new_article.php');</script>
+            <script>getHtml('content/show_new_article.php');</script>
         </div>
         <!-- Blog Sidebar Widgets Column -->
     </div>

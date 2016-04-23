@@ -4,7 +4,7 @@ $id = next($_SESSION);
 $id = current($_SESSION);
 $id_admin = (integer) $id;
 
-include '../Content/Controllers/Models/connect/connect.php';
+include '../content/controllers/models/connect/connect.php';
 $result_id = "SELECT id FROM user WHERE id='$id'";
 $id_students = mysqli_query($conn,$result_id);
 

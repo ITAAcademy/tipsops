@@ -17,7 +17,7 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
     $('#articleArea').html('<img src="Content/images/loader.gif" alt="" style=" overflow: auto;margin: auto;position: absolute; top: 0; left: 0; bottom: 0; right: 0;" />'); // Display a processing icon
     //ajax, get value for pagination
     var per_page_ajax = 1e+6; // default value for pagination
-    $.get('Content/Controllers/ajax_type_pagination.php', {type: 'type'}, function(data){
+    $.get('content/controllers/ajax_type_pagination.php', {type: 'type'}, function(data){
 
         per_page_ajax = parseInt(data);
 
@@ -25,7 +25,7 @@ $('#pagination').on('click', 'a', function() { // When click on a 'a' element of
 
             $.ajax({ // jQuery Ajax
                 type: 'POST',
-                url: 'Content/Controllers/con_pagination.php', // URL to the PHP file which will insert new value in the database
+                url: 'content/controllers/con_pagination.php', // URL to the PHP file which will insert new value in the database
                 data: data, // We send the data string
                 dataType: 'json', // Json format
                 timeout: 3000,

@@ -8,7 +8,7 @@ function PressEnter(your_text, your_event) {
     if(your_text != "" && your_event.keyCode == 13) {
         var emty = "Результати пошуку";
         $('h2#language').text(emty);
-        $.get('Content/Controllers/con_route_search.php', {key: your_text}, function (data) {
+        $.get('content/controllers/con_route_search.php', {key: your_text}, function (data) {
             $('div.main_content').html(data);
         });
     }
@@ -20,7 +20,7 @@ $(document).ready(function(){
        var text = $('input#search').val();
        var emty = "Результати пошуку";
        $('h2#language').text(emty);
-       $.get('Content/Controllers/con_route_search.php', {key: text}, function(data){
+       $.get('content/controllers/con_route_search.php', {key: text}, function(data){
            $('div.main_content').html(data);
        });
    });

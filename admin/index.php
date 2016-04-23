@@ -3,7 +3,7 @@
 /**
  * User: Khupchenko Oleksander
  */
-require_once("../Content/Controllers/Models/connect/connect.php");
+require_once("../content/controllers/models/connect/connect.php");
 require_once("models/articles.php");
 
 if(isset($_GET['action']))

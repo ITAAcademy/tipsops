@@ -4,7 +4,7 @@ $id = next($_SESSION);
 $id = current($_SESSION);
 $id_name = (integer) $id;
 
-include '../Content/Controllers/Models/connect/connect.php';
+include '../content/controllers/models/connect/connect.php';
 
 $sql = "SELECT firstName, secondName FROM user WHERE id='$id_name'";
 $result = mysqli_query($conn, $sql);
@@ -16,11 +16,11 @@ if($name>0) {
     }
 }
 ?>
-<form method="POST" action="Content/add_article.php" accept-charset="utf-8"  >
+<form method="POST" action="content/add_article.php" accept-charset="utf-8"  >
     <div class="form-group">
         <div class="col-lg-12">
             <label for="sel1">Оберіть категорію статтей:</label>
-            <script>getHtml('Content/Controllers/controller_block_select.php');</script>
+            <script>getHtml('content/controllers/controller_block_select.php');</script>
 
             <label for="inp1">Введіть назву статті:</label>
             <input type="text" class="form-control" id="inp1" name="inp1">

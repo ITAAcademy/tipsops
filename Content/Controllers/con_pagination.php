@@ -6,7 +6,7 @@
  * Time: 14:34
  */
 include 'controller_main_language.php';
-include 'Models/select_articles.php';
+include 'models/select_articles.php';
 include 'con_cookie.php';
 
 if($_POST)

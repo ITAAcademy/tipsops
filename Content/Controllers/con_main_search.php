@@ -7,7 +7,7 @@
 
 function PrepareUpdate($array_result)
 {
-    include'Models/update_revisions.php';
+    include'models/update_revisions.php';
     $numbers = count($array_result);
     for($i=0; $i<$numbers; $i++)
     {

@@ -6,7 +6,7 @@
  */
 function ShowArticles($array_article, $head_title)
 {
-    include"Views/main_content.php";
+    include"views/main_content.php";
     $numbers=get__numbers($head_title);//get numbers articles with sql db
     for( $i=0; $i<$numbers; $i++)
     {
@@ -21,7 +21,7 @@ function ShowArticles($array_article, $head_title)
 }
 function ShowListArticles($array_article, $article)
 {
-    include"Views/main_content.php";
+    include"views/main_content.php";
     $numbers = get__numbers($article);
     for($i=0; $i<$numbers; $i++)
     {
@@ -33,7 +33,7 @@ function ShowListArticles($array_article, $article)
 }
 function ShowSelectArticles($array_article)
 {
-    include"Views/main_content.php";
+    include"views/main_content.php";
 
         $title = $array_article[0]['title'];
         $updated = $array_article[0]['updated_up'];
@@ -45,7 +45,7 @@ function ShowSelectArticles($array_article)
 }
 function ShowNewArticles($array_article)
 {
-    include"Views/main_content.php";
+    include"views/main_content.php";
 
     $title = $array_article[0]['title'];
     $updated = $array_article[0]['updated_up'];
@@ -57,7 +57,7 @@ function ShowNewArticles($array_article)
 
 function ShowResult($array_article)
 {
-    include"Views/main_content.php";
+    include"views/main_content.php";
     $numbers=count($array_article);//get numbers article
     for( $i=0; $i<$numbers; $i++)
     {
@@ -72,7 +72,7 @@ function ShowResult($array_article)
 }
 function PrepareResult($array_article) // prepare result for encode in JSON
 {
-    include"Views/main_content.php";
+    include"views/main_content.php";
     $numbers=count($array_article);//get numbers article
     $result = "";
     for( $i=0; $i<$numbers; $i++)

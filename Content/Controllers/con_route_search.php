@@ -6,9 +6,9 @@
  */
 include'con_main_search.php';
 include 'controller_main_language.php';
-include'Models/select_articles.php';
-include 'Views/search.php';
-include 'Views/pagination.php';
+include'models/select_articles.php';
+include 'views/search.php';
+include 'views/pagination.php';
 include 'con_cookie.php';
 
 if(isset($_GET['key']))
@@ -42,7 +42,7 @@ else{
 }
 echo"
     <script type='text/javascript' src='template/js/jquery-1.12.0.js'></script>
-    <script type='text/javascript' src='Content/Controllers/Views/Views_js/pagination.js'></script>
+    <script type='text/javascript' src='content/controllers/views/views_js/pagination.js'></script>
     ";
 
 ?>
