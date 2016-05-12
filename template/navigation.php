@@ -11,6 +11,9 @@ $id_students = mysqli_query($conn,$result_id);
 $result = "SELECT id_user FROM user_admin WHERE id_user='$id_admin'";
 $id_admin = mysqli_query($conn, $result);
 
+$homeURL = mysqli_query($conn, "SELECT value FROM config WHERE param='baseUrl'");
+$homeURL = mysqli_fetch_assoc($homeURL);
+
 ?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu_backround">
     <div class="container">
@@ -35,7 +38,7 @@ $id_admin = mysqli_query($conn, $result);
                     ?>
                 </li>
                 <li style="top: 15px;">
-                    <a href="http://qa.intita.com/aboutus">Про нас</a>
+                    <a href="<?=$homeURL['value'] ?>/aboutus">Про нас</a>
                 </li>
                 <li style="top: 15px;">
                     <a href="contact.html">Контакти</a>
