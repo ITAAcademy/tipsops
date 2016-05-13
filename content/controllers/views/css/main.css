@@ -19,4 +19,87 @@
 .content{
     min-height: 450px;
 }
-
+/*---------------- Navigation styles -----------------*/
+/**
+ * User: Dmytro Herasymuk
+ */
+.mainHeader {
+    border-bottom: 2px solid #4b75a4;
+    min-height: 100px;
+    /*height: 100px;*/
+    position: relative;
+    display: block;
+    background-color: white;
+    box-sizing: content-box;
+}
+.main {
+    position: relative;
+    /*width: 1200px;*/
+    margin: 0 auto;
+}
+#menuList {
+    padding-right: 5%;
+}
+#logo_img {
+    float: left;
+    margin-top: 13px;
+}
+#logo_img img {
+    border-style: none;
+    outline: none;
+}
+@media (max-width: 1080px) {
+    #logo_img img {
+        /*max-width: 154px;*/
+        max-height: 50px;
+    }
+    #menuList {
+        max-height: 50px;
+    }
+}
+@media (min-width: 1080px) {
+    #logo_img img {
+        /*max-width: 232px;*/
+        max-height: 75px;
+    }
+    #menuList {
+        max-height: 75px;
+    }
+}
+.navigation a {
+    outline: none;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.navigation {
+    display: inline-block;
+    float: right;
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding: 0;
+}
+@media (max-width: 960px) {
+    .navigation {
+        margin-right: -10%; !important;
+    }
+}
+@media (min-width: 960px) {
+    .navigation {
+        margin-right: 0;
+    }
+}
+.navigation li {
+    display: inline;
+    padding: 10px;
+}
+.navigation li a {
+    text-decoration: none;
+    font-family: "MyriadPro";
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+}
+body {
+    padding-top: 0; !important;
+}
