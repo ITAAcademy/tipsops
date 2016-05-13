@@ -39,9 +39,9 @@ $fontStyle = $homeURL['value'] . '/font/myriadpro/regular';
         <ul class="dropdown-menu dropdown-menu-right">
             <li>
                 <?php
-//                if (mysqli_num_rows($id_students) > 0) {
+                if (mysqli_num_rows($id_students) > 0) {
                     print_r('<a href="text_editor.php" >Добавити нову статтю</a>');
-//                }
+                }
                 ?>
             </li>
             <li>
@@ -52,9 +52,9 @@ $fontStyle = $homeURL['value'] . '/font/myriadpro/regular';
             </li>
             <li>
                 <?php
-//                if ((mysqli_num_rows($id_admin) > 0)) {
+                if ((mysqli_num_rows($id_admin) > 0)) {
                     print_r('<a href="admin/index.php">Панель адміністратора</a>');
-//                }
+                }
                 ?>
             </li>
         </ul>
