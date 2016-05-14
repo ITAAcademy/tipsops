@@ -15,6 +15,9 @@ $homeURL = mysqli_query($conn, "SELECT value FROM config WHERE param='baseUrl'")
 $homeURL = mysqli_fetch_assoc($homeURL);
 
 $fontStyle = $homeURL['value'] . '/font/myriadpro/regular';
+
+$imagesPath = mysqli_query($conn, "SELECT value FROM config WHERE param='imagesPath'");
+$imagesPath = mysqli_fetch_assoc($imagesPath);
 ?>
 
 <style>
@@ -34,14 +37,14 @@ $fontStyle = $homeURL['value'] . '/font/myriadpro/regular';
             </a>
         </div>
         <button style="float: right" type="button" class="navbar-toggle" data-toggle="dropdown">
-            <img src="http://qa.intita.com/images/mainpage/hamburger.png">
+            <img src="<?= $imagesPath['value']; ?>/mainpage/hamburger.png" alt="button">
         </button>
         <ul class="dropdown-menu dropdown-menu-right">
             <li>
                 <?php
-//                if (mysqli_num_rows($id_students) > 0) {
+                if (mysqli_num_rows($id_students) > 0) {
                     print_r('<a href="text_editor.php" >Добавити нову статтю</a>');
-//                }
+                }
                 ?>
             </li>
             <li>
@@ -52,22 +55,19 @@ $fontStyle = $homeURL['value'] . '/font/myriadpro/regular';
             </li>
             <li>
                 <?php
-//                if ((mysqli_num_rows($id_admin) > 0)) {
+                if ((mysqli_num_rows($id_admin) > 0)) {
                     print_r('<a href="admin/index.php">Панель адміністратора</a>');
-//                }
+                }
                 ?>
             </li>
         </ul>
-<!--        <button style="float: right" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuList">-->
-<!--            <img src="http://qa.intita.com/images/mainpage/hamburger.png">-->
-<!--        </button>-->
         <div id="menuList" class="collapse navbar-collapse">
             <ul class="navigation">
                 <li>
                     <?php
-//                    if(mysqli_num_rows($id_students)>0){
+                    if(mysqli_num_rows($id_students)>0){
                     print_r('<a href="text_editor.php" >Добавити нову статтю</a>');
-//                    }
+                    }
                     ?>
                 </li>
                 <li>
@@ -78,9 +78,9 @@ $fontStyle = $homeURL['value'] . '/font/myriadpro/regular';
                 </li>
                 <li>
                     <?php
-//                    if((mysqli_num_rows($id_admin) > 0)){
+                    if((mysqli_num_rows($id_admin) > 0)){
                     print_r('<a href="admin/index.php">Панель адміністратора</a>');
-//                    }
+                    }
                     ?>
                 </li>
             </ul>
