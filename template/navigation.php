@@ -2,11 +2,11 @@
 session_start();
 $id = next($_SESSION);
 $id = current($_SESSION);
-$id_admin = (integer) $id;
+$id_admin = (integer)$id;
 
 include '../content/controllers/models/connect/connect.php';
 $result_id = "SELECT id FROM user WHERE id='$id'";
-$id_students = mysqli_query($conn,$result_id);
+$id_students = mysqli_query($conn, $result_id);
 
 $result = "SELECT id_user FROM user_admin WHERE id_user='$id_admin'";
 $id_admin = mysqli_query($conn, $result);
@@ -14,45 +14,77 @@ $id_admin = mysqli_query($conn, $result);
 $homeURL = mysqli_query($conn, "SELECT value FROM config WHERE param='baseUrl'");
 $homeURL = mysqli_fetch_assoc($homeURL);
 
+$fontStyle = $homeURL['value'] . '/font/myriadpro/regular';
 ?>
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu_backround">
+
+<style>
+    @font-face {
+        font-family: "MyriadPro";
+        font-style: normal;
+        font-weight: normal;
+        src: url("<?=$fontStyle; ?>.eot?#iefix") format("embedded-opentype"), url("<?=$fontStyle; ?>.woff") format("woff"), url("<?=$fontStyle; ?>.ttf") format("truetype"), url("<?=$fontStyle; ?>.otf#helveticaneuecyrbold") format("svg");
+    }
+</style>
+
+<nav class="mainHeader">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img src="template/images/Logo_bigUA.png" style="width:150px;height:45px;"></a>
+        <div id="logo_img">
+            <a href="<?= $homeURL['value']; ?>/tips/">
+                <img id="logo" src="template/images/Logo_bigUA.png" alt="logo"/>
+            </a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li style="top: 15px;">
+        <button style="float: right" type="button" class="navbar-toggle" data-toggle="dropdown">
+            <img src="http://qa.intita.com/images/mainpage/hamburger.png">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-right">
+            <li>
+                <?php
+//                if (mysqli_num_rows($id_students) > 0) {
+                    print_r('<a href="text_editor.php" >Добавити нову статтю</a>');
+//                }
+                ?>
+            </li>
+            <li>
+                <a href="<?= $homeURL['value'] ?>/aboutus">Про нас</a>
+            </li>
+            <li>
+                <a href="contact.html">Контакти</a>
+            </li>
+            <li>
+                <?php
+//                if ((mysqli_num_rows($id_admin) > 0)) {
+                    print_r('<a href="admin/index.php">Панель адміністратора</a>');
+//                }
+                ?>
+            </li>
+        </ul>
+<!--        <button style="float: right" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menuList">-->
+<!--            <img src="http://qa.intita.com/images/mainpage/hamburger.png">-->
+<!--        </button>-->
+        <div id="menuList" class="collapse navbar-collapse">
+            <ul class="navigation">
+                <li>
                     <?php
-                    if(mysqli_num_rows($id_students)>0){
-                        print_r ('<a href="text_editor.php" >Добавити нову статтю</a>');
-                    }
+//                    if(mysqli_num_rows($id_students)>0){
+                    print_r('<a href="text_editor.php" >Добавити нову статтю</a>');
+//                    }
                     ?>
                 </li>
-                <li style="top: 15px;">
-                    <a href="<?=$homeURL['value'] ?>/aboutus">Про нас</a>
+                <li>
+                    <a href="<?= $homeURL['value'] ?>/aboutus">Про нас</a>
                 </li>
-                <li style="top: 15px;">
+                <li>
                     <a href="contact.html">Контакти</a>
                 </li>
-                <li style="top: 15px;">
+                <li>
                     <?php
-                    if((mysqli_num_rows($id_admin) > 0)){
-                        print_r ('<a href="admin/index.php">Панель адміністратора</a>');
-                    }
+//                    if((mysqli_num_rows($id_admin) > 0)){
+                    print_r('<a href="admin/index.php">Панель адміністратора</a>');
+//                    }
                     ?>
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
+<div style="height: 5px; width: auto"></div>
